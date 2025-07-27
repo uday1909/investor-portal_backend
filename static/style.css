@@ -32,17 +32,21 @@ input {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
+  justify-content: flex-start;
 }
 
 .company-box {
-  width: calc(25% - 15px);
-  min-width: 180px;
+  flex: 1 1 calc(20% - 15px); /* 5 per row */
+  min-width: 200px;
+  max-width: 240px;
   background: white;
   border-radius: 8px;
   box-shadow: 0 1px 6px rgba(0,0,0,0.1);
   padding: 1rem;
-  cursor: pointer;
-  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: transform 0.2s ease;
 }
 
 .company-box:hover {
@@ -51,10 +55,8 @@ input {
 
 .quarters {
   margin-top: 1rem;
-}
-
-.quarter {
-  margin-top: 0.5rem;
+  overflow-y: auto;
+  max-height: 200px;
 }
 
 .quarter h4 {
@@ -94,4 +96,23 @@ a:hover {
 
 .hidden {
   display: none;
+}
+
+/* 🔄 Responsive Grid */
+@media screen and (max-width: 1200px) {
+  .company-box {
+    flex: 1 1 calc(33.33% - 15px); /* 3 per row */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .company-box {
+    flex: 1 1 calc(50% - 15px); /* 2 per row */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .company-box {
+    flex: 1 1 100%; /* 1 per row */
+  }
 }

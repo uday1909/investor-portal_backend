@@ -41,7 +41,9 @@
         companyList = Object.keys(data);
         updateAutocomplete();
         updateQuarterDropdown();
-        renderCompanies({}); // Start empty
+
+        // 🔥 ADD THIS LINE TO FIX THE INITIAL VIEW:
+        filterCompanies(); // <-- This ensures all companies are shown at first
       });
 
     function updateAutocomplete() {
