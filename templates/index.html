@@ -5,45 +5,70 @@
   <title>📊 Investor Portal Dashboard</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       padding: 2rem;
-      background: #f9f9f9;
+      background: #f4f6f8;
+      margin: 0;
     }
     h1 {
       color: #2c3e50;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      color: #555;
     }
     input {
       padding: 10px;
       font-size: 16px;
-      width: 300px;
-      margin-bottom: 20px;
+      width: 100%;
+      max-width: 400px;
+      margin-bottom: 30px;
       border: 1px solid #ccc;
+      border-radius: 4px;
     }
     .company {
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
       background: #fff;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+    }
+    .company h2 {
+      margin: 0 0 1rem 0;
+      font-size: 24px;
+      color: #333;
     }
     .quarter {
       margin-left: 1rem;
+      margin-bottom: 1rem;
+    }
+    .quarter h4 {
+      margin: 0;
+      font-size: 16px;
+      color: #2c3e50;
+      cursor: pointer;
     }
     ul {
       list-style: none;
       padding-left: 1rem;
+      margin-top: 0.5rem;
+    }
+    li {
+      margin: 5px 0;
     }
     a {
-      color: #2980b9;
+      color: #007acc;
       text-decoration: none;
-      display: block;
-      padding: 4px 0;
+      font-size: 15px;
     }
     a:hover {
       text-decoration: underline;
     }
     .not-found {
       color: #999;
+    }
+    .icon {
+      margin-right: 8px;
     }
   </style>
 </head>
@@ -53,7 +78,7 @@
 
   <input type="text" id="searchBox" placeholder="Search company name..." oninput="filterCompanies()">
 
-  <div id="output">Loading data...</div>
+  <div id="output"><p class="not-found">Start typing to search for a company...</p></div>
 
   <script>
     let allData = {};
@@ -66,7 +91,7 @@
           return;
         }
         allData = data;
-        renderCompanies(Object.keys(data));
+        renderCompanies([]); // 🚫 Don't show anything by default
       });
 
     function filterCompanies() {
@@ -92,24 +117,53 @@
         companyDiv.innerHTML = `<h2>${company}</h2>`;
 
         const quarters = allData[company];
-        for (const qtr in quarters) {
+        const sortedQuarters = Object.keys(quarters).sort().reverse(); // Descending order
+
+        sortedQuarters.forEach(qtr => {
+          const files = quarters[qtr];
+          const toggleId = `${company}_${qtr}`.replace(/\W+/g, "_");
+
           const qtrDiv = document.createElement("div");
           qtrDiv.className = "quarter";
-          qtrDiv.innerHTML = `<h4>${qtr}</h4>`;
-          const ul = document.createElement("ul");
+          qtrDiv.innerHTML = `
+            <h4 onclick="toggleVisibility('${toggleId}')">
+              ▶ ${qtr} (${files.length} file${files.length !== 1 ? "s" : ""})
+            </h4>
+            <ul id="${toggleId}" style="display:none;"></ul>
+          `;
 
-          quarters[qtr].forEach(fileObj => {
+          const ul = qtrDiv.querySelector("ul");
+
+          files.forEach(fileObj => {
+            const ext = getFileExtension(fileObj.file);
+            const icon = getFileIcon(ext);
             const li = document.createElement("li");
-            li.innerHTML = `<a href="${fileObj.file}" target="_blank">${fileObj.name}</a>`;
+            li.innerHTML = `<span class="icon">${icon}</span><a href="${fileObj.file}" target="_blank">${fileObj.name} (${ext})</a>`;
             ul.appendChild(li);
           });
 
-          qtrDiv.appendChild(ul);
           companyDiv.appendChild(qtrDiv);
-        }
+        });
 
         container.appendChild(companyDiv);
       });
+    }
+
+    function toggleVisibility(id) {
+      const el = document.getElementById(id);
+      el.style.display = (el.style.display === "none") ? "block" : "none";
+    }
+
+    function getFileExtension(link) {
+      const parts = link.split(".");
+      return parts.length > 1 ? parts.pop().split("?")[0].toLowerCase() : "file";
+    }
+
+    function getFileIcon(ext) {
+      if (ext === "pdf") return "📄";
+      if (ext === "mp3" || ext === "m4a") return "🎧";
+      if (ext === "txt") return "📝";
+      return "📁";
     }
   </script>
 </body>
