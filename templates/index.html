@@ -17,14 +17,20 @@
     p {
       color: #555;
     }
-    input {
+    input, select {
       padding: 10px;
       font-size: 16px;
       width: 100%;
       max-width: 400px;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       border: 1px solid #ccc;
       border-radius: 4px;
+    }
+    .filters {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
     }
     .company {
       margin-bottom: 2.5rem;
@@ -74,14 +80,28 @@
 </head>
 <body>
   <h1>📊 Investor Portal Dashboard</h1>
-  <p>Below are available presentations, transcripts, and recordings:</p>
+  <p>Search for presentations, transcripts, and recordings</p>
 
-  <input type="text" id="searchBox" placeholder="Search company name..." oninput="filterCompanies()">
+  <div class="filters">
+    <input list="companies" id="searchBox" placeholder="Search company..." oninput="filterCompanies()">
+    <datalist id="companies"></datalist>
 
-  <div id="output"><p class="not-found">Start typing to search for a company...</p></div>
+    <select id="quarterFilter" onchange="filterCompanies()">
+      <option value="">All Quarters</option>
+    </select>
+
+    <select id="typeFilter" onchange="filterCompanies()">
+      <option value="">All File Types</option>
+      <option value="pdf">PDF Only</option>
+      <option value="mp3">MP3 Only</option>
+    </select>
+  </div>
+
+  <div id="output">Loading data...</div>
 
   <script>
     let allData = {};
+    let companyList = [];
 
     fetch("/api/presentations")
       .then(res => res.json())
@@ -91,33 +111,80 @@
           return;
         }
         allData = data;
-        renderCompanies([]); // 🚫 Don't show anything by default
+        companyList = Object.keys(data);
+        updateAutocomplete();
+        updateQuarterDropdown();
       });
+
+    function updateAutocomplete() {
+      const datalist = document.getElementById("companies");
+      datalist.innerHTML = "";
+      companyList.forEach(name => {
+        const option = document.createElement("option");
+        option.value = name;
+        datalist.appendChild(option);
+      });
+    }
+
+    function updateQuarterDropdown() {
+      const qSet = new Set();
+      companyList.forEach(company => {
+        Object.keys(allData[company]).forEach(qtr => qSet.add(qtr));
+      });
+      const sorted = [...qSet].sort().reverse();
+      const dropdown = document.getElementById("quarterFilter");
+      sorted.forEach(qtr => {
+        const opt = document.createElement("option");
+        opt.value = qtr;
+        opt.text = qtr;
+        dropdown.appendChild(opt);
+      });
+    }
 
     function filterCompanies() {
       const term = document.getElementById("searchBox").value.toLowerCase();
-      const filtered = Object.keys(allData).filter(company =>
-        company.toLowerCase().includes(term)
+      const qtrFilter = document.getElementById("quarterFilter").value;
+      const typeFilter = document.getElementById("typeFilter").value;
+
+      const filtered = companyList.filter(c =>
+        c.toLowerCase().includes(term)
       );
-      renderCompanies(filtered);
+
+      const result = {};
+      filtered.forEach(company => {
+        result[company] = {};
+        const quarters = allData[company];
+        for (const qtr in quarters) {
+          if (qtrFilter && qtr !== qtrFilter) continue;
+          const filteredFiles = quarters[qtr].filter(f => {
+            if (!typeFilter) return true;
+            return getFileExtension(f.file) === typeFilter;
+          });
+          if (filteredFiles.length > 0) result[company][qtr] = filteredFiles;
+        }
+        if (Object.keys(result[company]).length === 0) delete result[company];
+      });
+
+      renderCompanies(result);
     }
 
-    function renderCompanies(companyList) {
+    function renderCompanies(filteredData) {
       const container = document.getElementById("output");
       container.innerHTML = "";
 
-      if (companyList.length === 0) {
-        container.innerHTML = "<p class='not-found'>No matching companies found.</p>";
+      const keys = Object.keys(filteredData);
+      if (keys.length === 0) {
+        container.innerHTML = "<p class='not-found'>No matching results.</p>";
         return;
       }
 
-      companyList.forEach(company => {
+      keys.forEach(company => {
         const companyDiv = document.createElement("div");
         companyDiv.className = "company";
         companyDiv.innerHTML = `<h2>${company}</h2>`;
 
-        const quarters = allData[company];
-        const sortedQuarters = Object.keys(quarters).sort().reverse(); // Descending order
+        const quarters = filteredData[company];
+        const sortedQuarters = Object.keys(quarters).sort().reverse();
 
         sortedQuarters.forEach(qtr => {
           const files = quarters[qtr];
@@ -133,7 +200,6 @@
           `;
 
           const ul = qtrDiv.querySelector("ul");
-
           files.forEach(fileObj => {
             const ext = getFileExtension(fileObj.file);
             const icon = getFileIcon(ext);
