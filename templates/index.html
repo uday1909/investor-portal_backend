@@ -3,7 +3,140 @@
 <head>
   <meta charset="UTF-8">
   <title>📊 Investor Portal Dashboard</title>
-  <link rel="stylesheet" href="/static/style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      padding: 2rem;
+      background: #f4f6f8;
+      margin: 0;
+    }
+
+    h1 {
+      color: #2c3e50;
+      margin-bottom: 1rem;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    input, select {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input {
+      width: 300px;
+    }
+
+    #output {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .company {
+      flex: 1 1 calc(20% - 20px);
+      min-width: 200px;
+      max-width: 280px;
+      background: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+      box-sizing: border-box;
+      transition: box-shadow 0.3s ease;
+      overflow: hidden;
+    }
+
+    .company:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .company h2 {
+      margin: 0;
+      font-size: 18px;
+      color: #2c3e50;
+      cursor: pointer;
+    }
+
+    .quarters {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.4s ease;
+    }
+
+    .quarters.expanded {
+      max-height: 1000px; /* Big enough to fit content */
+    }
+
+    .quarter {
+      margin-top: 0.5rem;
+      font-size: 15px;
+    }
+
+    .quarter h4 {
+      margin: 0.5rem 0;
+      font-size: 15px;
+      color: #333;
+      cursor: pointer;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 1rem;
+      margin: 0.5rem 0 0 0;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.4s ease;
+    }
+
+    ul.expanded {
+      max-height: 500px;
+    }
+
+    li {
+      margin: 5px 0;
+    }
+
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .icon {
+      margin-right: 6px;
+    }
+
+    .not-found {
+      color: #999;
+    }
+
+    @media (max-width: 1200px) {
+      .company { flex: 1 1 calc(25% - 20px); }
+    }
+
+    @media (max-width: 900px) {
+      .company { flex: 1 1 calc(33.33% - 20px); }
+    }
+
+    @media (max-width: 600px) {
+      .company { flex: 1 1 calc(50% - 20px); }
+    }
+
+    @media (max-width: 400px) {
+      .company { flex: 1 1 100%; }
+    }
+  </style>
 </head>
 <body>
   <h1>📊 Investor Portal Dashboard</h1>
@@ -20,11 +153,10 @@
       <option value="">All File Types</option>
       <option value="pdf">PDF Only</option>
       <option value="mp3">MP3 Only</option>
-      <option value="m4a">M4A Only</option>
     </select>
   </div>
 
-  <div id="output" class="company-grid"></div>
+  <div id="output">Loading data...</div>
 
   <script>
     let allData = {};
@@ -41,9 +173,7 @@
         companyList = Object.keys(data);
         updateAutocomplete();
         updateQuarterDropdown();
-
-        // 🔥 ADD THIS LINE TO FIX THE INITIAL VIEW:
-        filterCompanies(); // <-- This ensures all companies are shown at first
+        filterCompanies(); // render initially
       });
 
     function updateAutocomplete() {
@@ -76,9 +206,7 @@
       const qtrFilter = document.getElementById("quarterFilter").value;
       const typeFilter = document.getElementById("typeFilter").value;
 
-      const filtered = companyList.filter(c =>
-        c.toLowerCase().includes(term)
-      );
+      const filtered = companyList.filter(c => c.toLowerCase().includes(term));
 
       const result = {};
       filtered.forEach(company => {
@@ -103,21 +231,24 @@
       container.innerHTML = "";
 
       const keys = Object.keys(data);
-      if (keys.length === 0) return;
+      if (keys.length === 0) {
+        container.innerHTML = "<p class='not-found'>No matching results.</p>";
+        return;
+      }
 
       keys.forEach(company => {
         const companyDiv = document.createElement("div");
-        companyDiv.className = "company-box";
+        companyDiv.className = "company";
         const companyId = `company_${company.replace(/\W+/g, "_")}`;
-        companyDiv.innerHTML = `
-          <div onclick="toggleCompany('${companyId}')">${company}</div>
-          <div id="${companyId}" class="quarters hidden"></div>
-        `;
 
+        companyDiv.innerHTML = `
+          <h2 onclick="toggleCompany('${companyId}')">${company}</h2>
+          <div id="${companyId}" class="quarters"></div>
+        `;
         const quartersDiv = companyDiv.querySelector(".quarters");
+
         const quarters = data[company];
         const sorted = Object.keys(quarters).sort().reverse();
-
         sorted.forEach(qtr => {
           const toggleId = `${company}_${qtr}`.replace(/\W+/g, "_");
           const qtrDiv = document.createElement("div");
@@ -126,10 +257,11 @@
             <h4 onclick="toggleVisibility('${toggleId}')">
               ▶ ${qtr} (${quarters[qtr].length} file${quarters[qtr].length !== 1 ? 's' : ''})
             </h4>
-            <ul id="${toggleId}" class="hidden"></ul>
+            <ul id="${toggleId}"></ul>
           `;
 
           const ul = qtrDiv.querySelector("ul");
+
           quarters[qtr].forEach(f => {
             const ext = getFileExtension(f.file);
             const icon = getFileIcon(ext);
@@ -147,12 +279,12 @@
 
     function toggleVisibility(id) {
       const el = document.getElementById(id);
-      el.classList.toggle("hidden");
+      el.classList.toggle("expanded");
     }
 
     function toggleCompany(id) {
       const el = document.getElementById(id);
-      el.classList.toggle("hidden");
+      el.classList.toggle("expanded");
     }
 
     function getFileExtension(link) {
