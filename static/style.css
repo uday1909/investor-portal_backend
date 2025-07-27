@@ -1,0 +1,98 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Investor Portal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background: #f4f4f4;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    input {
+      padding: 10px;
+      width: 300px;
+      font-size: 1rem;
+    }
+    .company-section {
+      margin-top: 2rem;
+    }
+    .quarter {
+      background: #fff;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .file {
+      margin: 0.5rem 0;
+    }
+    .file a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Investor Portal</h1>
+  <input type="text" id="search" placeholder="Search company name..." />
+
+  <div id="results" class="company-section"></div>
+
+  <script>
+    let data = {};
+
+    fetch('/api/presentations')
+      .then(res => res.json())
+      .then(json => {
+        if (json.data) {
+          data = json.data;
+        } else {
+          data = json;
+        }
+      });
+
+    document.getElementById('search').addEventListener('input', function() {
+      const term = this.value.toLowerCase();
+      const container = document.getElementById('results');
+      container.innerHTML = '';
+
+      if (term === '') return;
+
+      const companies = Object.keys(data).filter(name => name.toLowerCase().includes(term));
+
+      if (companies.length === 0) {
+        container.innerHTML = '<p>No matching companies found.</p>';
+        return;
+      }
+
+      companies.forEach(company => {
+        const companyDiv = document.createElement('div');
+        companyDiv.innerHTML = `<h2>${company}</h2>`;
+        
+        const quarters = data[company];
+        Object.keys(quarters).forEach(q => {
+          const quarterDiv = document.createElement('div');
+          quarterDiv.className = 'quarter';
+          quarterDiv.innerHTML = `<h3>${q}</h3>`;
+
+          quarters[q].forEach(file => {
+            const fileDiv = document.createElement('div');
+            fileDiv.className = 'file';
+            fileDiv.innerHTML = `📄 <a href="${file.file}" target="_blank">${file.name}</a>`;
+            quarterDiv.appendChild(fileDiv);
+          });
+
+          companyDiv.appendChild(quarterDiv);
+        });
+
+        container.appendChild(companyDiv);
+      });
+    });
+  </script>
+</body>
+</html>

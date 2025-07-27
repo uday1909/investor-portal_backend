@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: investor-portal-backend
+    env: python
+    plan: free
+    buildCommand: pip install -r investor-portal_backend/requirements.txt
+    startCommand: python investor-portal_backend/server.py
