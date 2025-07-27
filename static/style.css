@@ -1,98 +1,97 @@
-<!-- templates/index.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Investor Portal</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 2rem;
-      background: #f4f4f4;
-    }
-    h1 {
-      color: #2c3e50;
-    }
-    input {
-      padding: 10px;
-      width: 300px;
-      font-size: 1rem;
-    }
-    .company-section {
-      margin-top: 2rem;
-    }
-    .quarter {
-      background: #fff;
-      padding: 1rem;
-      margin: 1rem 0;
-      border-radius: 6px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    .file {
-      margin: 0.5rem 0;
-    }
-    .file a {
-      color: #2980b9;
-      text-decoration: none;
-    }
-  </style>
-</head>
-<body>
-  <h1>Investor Portal</h1>
-  <input type="text" id="search" placeholder="Search company name..." />
+body {
+  font-family: 'Segoe UI', sans-serif;
+  padding: 2rem;
+  background: #f4f6f8;
+  margin: 0;
+}
 
-  <div id="results" class="company-section"></div>
+h1 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
 
-  <script>
-    let data = {};
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
 
-    fetch('/api/presentations')
-      .then(res => res.json())
-      .then(json => {
-        if (json.data) {
-          data = json.data;
-        } else {
-          data = json;
-        }
-      });
+input, select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
 
-    document.getElementById('search').addEventListener('input', function() {
-      const term = this.value.toLowerCase();
-      const container = document.getElementById('results');
-      container.innerHTML = '';
+input {
+  width: 300px;
+}
 
-      if (term === '') return;
+.company-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
 
-      const companies = Object.keys(data).filter(name => name.toLowerCase().includes(term));
+.company-box {
+  width: calc(25% - 15px);
+  min-width: 180px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
 
-      if (companies.length === 0) {
-        container.innerHTML = '<p>No matching companies found.</p>';
-        return;
-      }
+.company-box:hover {
+  transform: scale(1.02);
+}
 
-      companies.forEach(company => {
-        const companyDiv = document.createElement('div');
-        companyDiv.innerHTML = `<h2>${company}</h2>`;
-        
-        const quarters = data[company];
-        Object.keys(quarters).forEach(q => {
-          const quarterDiv = document.createElement('div');
-          quarterDiv.className = 'quarter';
-          quarterDiv.innerHTML = `<h3>${q}</h3>`;
+.quarters {
+  margin-top: 1rem;
+}
 
-          quarters[q].forEach(file => {
-            const fileDiv = document.createElement('div');
-            fileDiv.className = 'file';
-            fileDiv.innerHTML = `📄 <a href="${file.file}" target="_blank">${file.name}</a>`;
-            quarterDiv.appendChild(fileDiv);
-          });
+.quarter {
+  margin-top: 0.5rem;
+}
 
-          companyDiv.appendChild(quarterDiv);
-        });
+.quarter h4 {
+  margin: 0;
+  font-size: 15px;
+  cursor: pointer;
+  color: #2c3e50;
+}
 
-        container.appendChild(companyDiv);
-      });
-    });
-  </script>
-</body>
-</html>
+ul {
+  list-style: none;
+  padding-left: 1rem;
+  margin: 0.5rem 0 0;
+}
+
+li {
+  margin: 5px 0;
+}
+
+a {
+  color: #007acc;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.icon {
+  margin-right: 6px;
+}
+
+.not-found {
+  color: #999;
+}
+
+.hidden {
+  display: none;
+}

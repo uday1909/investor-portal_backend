@@ -3,82 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>📊 Investor Portal Dashboard</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      padding: 2rem;
-      background: #f4f6f8;
-      margin: 0;
-    }
-    h1 {
-      color: #2c3e50;
-      margin-bottom: 0.5rem;
-    }
-    .filters {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 30px;
-    }
-    input, select {
-      padding: 10px;
-      font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    input {
-      width: 300px;
-    }
-    .company {
-      margin-bottom: 1rem;
-      background: #fff;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 1px 6px rgba(0,0,0,0.05);
-    }
-    .company h2 {
-      margin: 0;
-      font-size: 20px;
-      color: #2c3e50;
-      cursor: pointer;
-    }
-    .quarters {
-      margin-top: 1rem;
-      margin-left: 1rem;
-      display: none;
-    }
-    .quarter h4 {
-      margin: 0.5rem 0;
-      font-size: 16px;
-      color: #333;
-      cursor: pointer;
-    }
-    ul {
-      list-style: none;
-      padding-left: 1rem;
-      margin: 0.5rem 0 0 0;
-      display: none;
-    }
-    li {
-      margin: 5px 0;
-    }
-    a {
-      color: #007acc;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .icon {
-      margin-right: 6px;
-    }
-    .not-found {
-      color: #999;
-    }
-  </style>
+  <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
   <h1>📊 Investor Portal Dashboard</h1>
+
   <div class="filters">
     <input list="companies" id="searchBox" placeholder="Search company..." oninput="filterCompanies()">
     <datalist id="companies"></datalist>
@@ -91,10 +20,11 @@
       <option value="">All File Types</option>
       <option value="pdf">PDF Only</option>
       <option value="mp3">MP3 Only</option>
+      <option value="m4a">M4A Only</option>
     </select>
   </div>
 
-  <div id="output">Loading data...</div>
+  <div id="output" class="company-grid"></div>
 
   <script>
     let allData = {};
@@ -111,6 +41,7 @@
         companyList = Object.keys(data);
         updateAutocomplete();
         updateQuarterDropdown();
+        renderCompanies({}); // Start empty
       });
 
     function updateAutocomplete() {
@@ -170,21 +101,21 @@
       container.innerHTML = "";
 
       const keys = Object.keys(data);
-      if (keys.length === 0) {
-        container.innerHTML = "<p class='not-found'>No matching results.</p>";
-        return;
-      }
+      if (keys.length === 0) return;
 
       keys.forEach(company => {
         const companyDiv = document.createElement("div");
-        companyDiv.className = "company";
+        companyDiv.className = "company-box";
         const companyId = `company_${company.replace(/\W+/g, "_")}`;
+        companyDiv.innerHTML = `
+          <div onclick="toggleCompany('${companyId}')">${company}</div>
+          <div id="${companyId}" class="quarters hidden"></div>
+        `;
 
-        companyDiv.innerHTML = `<h2 onclick="toggleCompany('${companyId}')">${company}</h2><div id="${companyId}" class="quarters"></div>`;
         const quartersDiv = companyDiv.querySelector(".quarters");
-
         const quarters = data[company];
         const sorted = Object.keys(quarters).sort().reverse();
+
         sorted.forEach(qtr => {
           const toggleId = `${company}_${qtr}`.replace(/\W+/g, "_");
           const qtrDiv = document.createElement("div");
@@ -193,12 +124,10 @@
             <h4 onclick="toggleVisibility('${toggleId}')">
               ▶ ${qtr} (${quarters[qtr].length} file${quarters[qtr].length !== 1 ? 's' : ''})
             </h4>
-            <ul id="${toggleId}"></ul>
+            <ul id="${toggleId}" class="hidden"></ul>
           `;
 
           const ul = qtrDiv.querySelector("ul");
-          ul.style.display = "none";
-
           quarters[qtr].forEach(f => {
             const ext = getFileExtension(f.file);
             const icon = getFileIcon(ext);
@@ -216,12 +145,12 @@
 
     function toggleVisibility(id) {
       const el = document.getElementById(id);
-      el.style.display = el.style.display === "none" ? "block" : "none";
+      el.classList.toggle("hidden");
     }
 
     function toggleCompany(id) {
       const el = document.getElementById(id);
-      el.style.display = el.style.display === "none" ? "block" : "none";
+      el.classList.toggle("hidden");
     }
 
     function getFileExtension(link) {
