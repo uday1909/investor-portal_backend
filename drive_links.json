@@ -3,7 +3,7 @@
     "Q4-FY2025": [
       {
         "name": "Transcript",
-        "file": "https://drive.google.com/file/d/13Ah6j2jbacxxvX02gOnxQ_9BW6wxCu2u/preview"   
+        "file": "https://drive.google.com/file/d/13Ah6j2jbacxxvX02gOnxQ_9BW6wxCu2u/preview"
       },
       {
         "name": "Presentation",
@@ -14,6 +14,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1gPsZkthnA8fhnj9eH-mprHK8w4vrsZam/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1NjSsEvtYBZ3eP_XioyIaltpMfZmWWgiU/preview"
       }
     ]
   },
@@ -57,6 +61,12 @@
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1Wo5ybEp4lggcKXwd5aA5in7s-rTrtAnp/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1RD_sq5t-6-7ehT9Q914IKC7B7i-DA-Ug/preview"
+      }
     ]
   },
   "PFC": {
@@ -85,6 +95,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1p2uqVUWPIVCUGO6nKTRg__eUKJFBUrye/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1pOQChru-krD8JOd9z3h6LY1jIz2LYGuz/preview"
       }
     ]
   },
@@ -97,6 +111,12 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1AAFqqMJm5SebmI5EzFUSFZb64msX9pBL/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1nWi_EnsMmez6hMmegwVzIYK_kFTZD-mE/preview"
       }
     ]
   },
@@ -135,6 +155,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1a86efo5RUeXF2YcbQ5M1UTTw55KzdFnz/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1o9qDzFOtKLhvYx1Dbs6SuNEGvkbFspzt/preview"
       }
     ]
   },
@@ -145,7 +169,12 @@
         "file": "https://drive.google.com/file/d/1h1z4no3jyi5nG1pv0R1iwL6an97oGSO9/preview"
       }
     ],
-    "Q1-FY2026": []
+    "Q1-FY2026": [
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1V2Rihm-ulxbUyiyLiIPmKMdQJn0S830K/preview"
+      }
+    ]
   },
   "PAVNAIND": {
     "Q1-FY2026": [
@@ -206,6 +235,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1_ze0O6NiuAoQKpjnXvM5C1FyPpz7kH4b/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1GPsu1nl8vVECvTPLP8SZf0BFcq_Jy0dS/preview"
       }
     ]
   },
@@ -218,6 +251,16 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1BtZBbc-fkLTkedhdYiIzMvyFgMoJMIg1/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Concall Recording",
+        "file": "https://drive.google.com/file/d/1Pl8FGAf5sKxZXw22_6eATU6DyGXDoBkq/preview"
+      },
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1UbM1M7RoWrVwMIgPXdnidsc54_4vewB-/preview"
       }
     ]
   },
@@ -405,6 +448,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1xS1ANu4chRDaO4A9XeLYEWNCe253xNil/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1eEfbWpl_TGxA4avZVNFCO_leSJSdKgty/preview"
       }
     ]
   },
@@ -458,6 +505,12 @@
       {
         "name": "Concall Recording",
         "file": "https://drive.google.com/file/d/1JMmrpTbAUxZK1X43TgzOxJg-SCbhnC1e/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1VAMM8qWnmkIJQa1uAeeLiUiasO8PvTpO/preview"
       }
     ]
   },
@@ -530,7 +583,13 @@
     ]
   },
   "NIACL": {
-    "Q4-FY2025": []
+    "Q4-FY2025": [],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1IkeNXrRYdoea1cwfEOiWuxpkIryhZNlR/preview"
+      }
+    ]
   },
   "NHPC": {
     "Q4-FY2025": [
@@ -710,6 +769,16 @@
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1ulsYTW61DAeIOUZct3Ul-UoonsQZhaRr/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Concall Recording",
+        "file": "https://drive.google.com/file/d/1tA_Ag6c9YfBllGJIwHr5W6fHMUAJ7AzB/preview"
+      },
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1P-1Wa0J_urfLaVFcSgJwx7utiaIhVYwE/preview"
+      }
     ]
   },
   "NAVA": {
@@ -759,6 +828,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1r-tleUr5M9QC5NToeyrz9zSOVWH0-Esi/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1K4KmeAWQet0VwvCiCCuu8uLnYuwnXaxu/preview"
       }
     ]
   },
@@ -771,6 +844,12 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1q9wphiwYWen6PXNAYp7I-uJmi8FMPi8x/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1aiv8AS_pvqt_z-QDkrGEqUK05G3OVe3R/preview"
       }
     ]
   },
@@ -848,6 +927,12 @@
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1Lxj5_05YqXdqU6W2eFLdYZXMnfiM_klP/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1m97QXxLDD2IsP1GkP0qurlCoC5nD3Xk4/preview"
+      }
     ]
   },
   "MRPL": {
@@ -909,6 +994,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1xL9bCRwxOEOSW6cYgjCvetm9z5i9S2k2/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/108bk7EQJfsPBvdWDuL81NjPRjeUQjdA2/preview"
       }
     ]
   },
@@ -960,6 +1049,12 @@
         "name": "Concall Recording",
         "file": "https://drive.google.com/file/d/1auTIyS39385TIFHLN-JiSjTzdQv3XN5c/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1TL_X3ozWVFa4fxQ8Vh8lsF2llNm4qGdj/preview"
+      }
     ]
   },
   "MOL": {
@@ -971,6 +1066,12 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1N8DhNnt_ltgh_dssYG9fyQ7kyGfTGFgh/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1smR9t80y4MSYzCB319083XAhArk4VleE/preview"
       }
     ]
   },
@@ -1043,6 +1144,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/16JVDfmupqJDXKPIvRUvq5WzAGXvaNCXP/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1Toj0rQWwUKNU4GJFUv_-NKkGuzL2h9_7/preview"
       }
     ]
   },
@@ -1239,6 +1344,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1w3T-YPeUvyTDq5PbSxJhN0MKxWzibinj/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/17AKPq3QOH81wIkOBh-xXooyiCiNy9Kkb/preview"
       }
     ]
   },
@@ -1309,6 +1418,12 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1xj89moBcAHDfDdmNI3D7-QatXBHx0_m5/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1gSUEIJrD4ZZhETOMKCWHDmtbdsYrB7Qc/preview"
       }
     ]
   },
@@ -1383,6 +1498,12 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1u1SY2bkeytDaEd_cp3_rNWqfAQg2pUZ-/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1_ioFpYSB_5sCc3a7SGcywGGfvI5WZLhi/preview"
       }
     ]
   },
@@ -1541,6 +1662,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1CLcQXirOKLBNdozwDjALI0qVGXW4Fya_/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1ANlgx-uCumPJwMxh0ngpe86j1qUfCAlc/preview"
       }
     ]
   },
@@ -1554,6 +1679,12 @@
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1a_wTZOZKOpxVk_vFvGsRO9V0oJVkhphk/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1jZpM6I0c3iHU8-QvlWyrQsMd22eFIDCZ/preview"
+      }
     ]
   },
   "LXCHEM": {
@@ -1561,6 +1692,12 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1FpBD0nFLjwNHZnoibHAXWbYa_cuJNrg_/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1ERnp9vRz2d_sKyOXwjnsGGJyaAIytpCN/preview"
       }
     ]
   },
@@ -1647,6 +1784,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1YHILehqFroSv7StS1l1WMcIrGauvTtfk/preview"
+      },
+      {
+        "name": "Concall Recording",
+        "file": "https://drive.google.com/file/d/19Z9FfsCJjziIKLmu1-cgXgorDNQmDt0m/preview"
       }
     ]
   },
@@ -1665,6 +1806,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1-X1bfGKUj7GT97DSgKaNf2v8_LXoB9SM/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/14NDk9O_j1QV0c4K5xdJP8LdeCIRKISaT/preview"
       }
     ]
   },
@@ -1734,6 +1879,12 @@
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1tjcrfW12c3A_VLhVTSyiak5Jigp9PhrX/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1m5oD5hE3t8Z1SLLEV0ywQyH5uhtKCP2u/preview"
+      }
     ]
   },
   "LINC": {
@@ -1783,6 +1934,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/18w6zZgC4bbE3ljb6sdpXDBnFr9AcL4Gd/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1u5v21Wv-47Lno3xYycUiTPB-GtDxsGx3/preview"
       }
     ]
   },
@@ -1801,6 +1956,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1Cwl9AEffiEU14_Nz9Gc5I_KNfJnW4SDJ/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1Ml9fyo_cs0hfPH9o1YVC-P2cvWpgfPqr/preview"
       }
     ]
   },
@@ -1859,6 +2018,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1VktkaIoZr0FIRpRJr8IM_wozxlNWCj5h/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/18ShtDaF65_XixKbIeuqCDD_Ncp6JVIP0/preview"
       }
     ]
   },
@@ -1957,6 +2120,10 @@
       {
         "name": "Concall Recording",
         "file": "https://drive.google.com/file/d/1bSAB0dxIJtJMKhd7xiuv4spqLqqgDeeN/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1ZY7BTOa_4P8eVqo1RGuCjsuR7TYdPCbT/preview"
       }
     ]
   },
@@ -1985,6 +2152,12 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1t_k9hyrliw_cAhiPcP6rHRD4kiK_m7uQ/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1KqLB2iHDJR9FqGUvcupcvYgWh2eqDaMu/preview"
       }
     ]
   },
@@ -2048,6 +2221,12 @@
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/18HBTFfnJBJlh0doVRG-rM8w4KShy0qkB/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1TmhfPcLtA3M3DiyXGfClWSFgfBaVqBhM/preview"
+      }
     ]
   },
   "KOLTEPATIL": {
@@ -2093,6 +2272,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/14R41gW1gSeOivb9hdbstzrjywW10TEsY/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/19RkpIyfw0kXCI4-EAkMV_cGjv1phumnF/preview"
       }
     ]
   },
@@ -2155,6 +2338,10 @@
       {
         "name": "Concall Recording",
         "file": "https://drive.google.com/file/d/1DuIJhxr9AVyx3MJc6JmIZB4dX0F8ZQLo/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1HTB5EGvTN0992WE2IA2VfqiR8Psb8QHT/preview"
       }
     ]
   },
@@ -2181,6 +2368,10 @@
       {
         "name": "Concall Recording",
         "file": "https://drive.google.com/file/d/1LdArXX5J-iUdFgRgp3ytEZUhUUkibQ1l/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1nUr4GBDsFStZjtZqeBw85zhKhHz32CIX/preview"
       }
     ]
   },
@@ -2210,6 +2401,12 @@
         "name": "Concall Recording",
         "file": "https://drive.google.com/file/d/1xUq8qhW-EckeXwjCUJnP8tmNe4cdX_IS/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/16Hlsyjc9k94jXyZRU2QvqaT4Ep1wSnC-/preview"
+      }
     ]
   },
   "KARURVYSYA": {
@@ -2227,6 +2424,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1EP_475uLmk80P7xwEExsqdLG6zDlbDUK/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1Be95dP1c0XjcaqdNdedVIVQcKXt0_0k4/preview"
       }
     ]
   },
@@ -2345,6 +2546,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1xhFtoePuTAM9L_t7kiSGlQA6_1xVyGzO/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1MUoFsVOPzP9TfvByB8h6bEDRmhBnA4uq/preview"
       }
     ]
   },
@@ -2434,6 +2639,12 @@
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1p9dut3svCaf_ji7RCI5z1Q7VxAuwPoe1/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1s_mOtSpZvQNxAivIcV4T-yinbxpS_EfD/preview"
+      }
     ]
   },
   "JUBLINGREA": {
@@ -2509,6 +2720,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/11ycI2bhlr5PIPFu0wlJy1YSLYauZiTXj/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1rd2U0TjYSRwy3tf2f-g8jt4IdwSg-NKe/preview"
       }
     ]
   },
@@ -2551,6 +2766,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1vqQbmQ7BLLTmVGeDQ9No7W8fQnrm8lSm/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/12UYAYWzml5yzyZ-QqW_pPUIhuOINEouP/preview"
       }
     ]
   },
@@ -2587,6 +2806,12 @@
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/182V1WMoz2ZmL5HXCDaozk8Id5Z1hyH_w/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1tgkh1o4A6QZFgpX9yLvtUYZ5tjdT1Hnl/preview"
+      }
     ]
   },
   "JKCEMENT": {
@@ -2614,7 +2839,12 @@
         "file": "https://drive.google.com/file/d/1Jt65I-stL5H4wNMk13fv8LdLw0HYHXv6/preview"
       }
     ],
-    "Q1-FY2026": []
+    "Q1-FY2026": [
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1hh9leqmWoUAEK2vo_8qlVtG-5abvaomT/preview"
+      }
+    ]
   },
   "JISLDVREQS": {
     "Q4-FY2025": [
@@ -2627,7 +2857,12 @@
         "file": "https://drive.google.com/file/d/1G9D99zbovAiUsxHWbmhk5ITfM0UBwHXJ/preview"
       }
     ],
-    "Q1-FY2026": []
+    "Q1-FY2026": [
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1Pz4MAlUHoxOSuNjO4Tv1do7SSeZJT2Yx/preview"
+      }
+    ]
   },
   "JIOFIN": {
     "Q4-FY2025": [
@@ -2746,6 +2981,12 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1K-Uz4QDFRrlthOkn57XztFhwwxw0QjGP/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1CLB_MkHK8UwxEJI1wP2O78NeJpNUdkqD/preview"
       }
     ]
   },
@@ -2884,6 +3125,10 @@
       {
         "name": "Concall Recording",
         "file": "https://drive.google.com/file/d/11fYEEccFrULgPhRFCnRNm7l_7CqI8BwU/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1s4_qLOJDdgNZZzJaR0G29rFlge5u89V_/preview"
       }
     ]
   },
@@ -2968,6 +3213,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1_n3R6LNrgSAhM3qLcCQtkBjb8A7vKggc/preview"
+      },
+      {
+        "name": "Concall Recording",
+        "file": "https://drive.google.com/file/d/1FvnrtN7Kfl1FBnnGIolSmo-1p9Gtk4XA/preview"
       }
     ]
   },
@@ -3039,6 +3288,12 @@
         "name": "Transcript",
         "file": "https://drive.google.com/file/d/120U5e1uHpsxKJi2WsYgn1OCKxQdP_CKw/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1xAE9VJ4X8MSVqYUwp9iwXNak6aIyK2AI/preview"
+      }
     ]
   },
   "INFOBEAN": {
@@ -3064,6 +3319,10 @@
       {
         "name": "Concall Recording",
         "file": "https://drive.google.com/file/d/1g8ViFPxuc3nswitzdVLyQQiwnlewg4-N/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/17eZAdeqLzn0DDDA3EfBj4ko488fZty03/preview"
       }
     ]
   },
@@ -3085,6 +3344,12 @@
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1_lbz884QqwtJpQ9bz4OPHf0DxfwTGAUw/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1X0pB0Wm9n7AWgxgeNiHa7t9M97VhjiGz/preview"
+      }
     ]
   },
   "INDOSTAR": {
@@ -3101,7 +3366,12 @@
   },
   "INDOCO": {
     "Q4-FY2025": [],
-    "Q1-FY2026": []
+    "Q1-FY2026": [
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1H-B2ny4Jd5Nr48sD2fQPgQ70CcmqFmvX/preview"
+      }
+    ]
   },
   "INDIGOPNTS": {
     "Q4-FY2025": [
@@ -3120,6 +3390,12 @@
       {
         "name": "Concall Recording",
         "file": "https://drive.google.com/file/d/1OAQoFzIHRfpTpehxyI6l_r9Bph28ZOAE/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Concall Recording",
+        "file": "https://drive.google.com/file/d/1jZ0VHwzSaOkJ_W1bDhYEYBVMP2wV4wQ2/preview"
       }
     ]
   },
@@ -3303,6 +3579,16 @@
         "name": "Concall Recording",
         "file": "https://drive.google.com/file/d/1pESGc-fjgWdaZqki7MbAmzQT9csHcE88/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Concall Recording",
+        "file": "https://drive.google.com/file/d/1qcpksP_aFaVIhwPtwxs7Bjdl_uYe15oN/preview"
+      },
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1S1ZbP-TEXxnP7LmJw0Bs17PsiPjpeiJN/preview"
+      }
     ]
   },
   "IIFL": {
@@ -3314,6 +3600,12 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1l1RKcaKbiwPCf_wOXDHDpjYKD9AQxQx-/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1LhZ5FkJYTISfvJVVvZ82Vrx29owsTbHR/preview"
       }
     ]
   },
@@ -3342,6 +3634,12 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1IgB4pRAzvnBmBswbjK-lOnp0_ColSTP-/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1_Xk0GfkeVgsbw0JPVAZJUe9L7PBiKEq9/preview"
       }
     ]
   },
@@ -3390,6 +3688,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1MnKFBst_7KJxCw8GJNFGn-VwvtuTfqT6/preview"
+      },
+      {
+        "name": "Concall Recording",
+        "file": "https://drive.google.com/file/d/1JBLpE9ePkeV3oWpXDpiFHqI9xrfqOfeN/preview"
       }
     ]
   },
@@ -3412,6 +3714,10 @@
       {
         "name": "Concall Recording",
         "file": "https://drive.google.com/file/d/1XY-Fo7YX43jnbvpBbEAfChB52VxV7U-9/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1VtyVBvRjzHLih18vxlVqolMBK-tbhPUQ/preview"
       }
     ]
   },
@@ -3503,6 +3809,16 @@
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1T0ztK7VJ4OpDmA7GQwrPpUHxCD3Vx0Wl/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Concall Recording",
+        "file": "https://drive.google.com/file/d/19PaXgzML8Wkz-LWc6i4nYZV4DapoK5bN/preview"
+      },
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1oc0wDKUIlQQDo1rzX8NyU0bRoOXOtYBa/preview"
+      }
     ]
   },
   "HUHTAMAKI": {
@@ -3520,6 +3836,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1Wp7Ip32SqR46FUjW7lls14dS-2_ZpJd_/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1Szfyesmdls9zvoKIg02lNaM3uijzxI8d/preview"
       }
     ]
   },
@@ -3652,6 +3972,12 @@
       {
         "name": "Concall Recording",
         "file": "https://drive.google.com/file/d/11wjtCZy5qsVKIN8zzJDcDQZyCgBy92h0/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1nxYQHMZxfJVlM2QUlGBGlgAOiY-7Tqxs/preview"
       }
     ]
   },
@@ -4038,6 +4364,16 @@
         "name": "Concall Recording",
         "file": "https://drive.google.com/file/d/1FSG8YcWZ7fwuNhNl7v5p8a2L_epG6tfE/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Concall Recording",
+        "file": "https://drive.google.com/file/d/1S9ThAUe1lh_z-I6KZZofhRZzu-5To3Vh/preview"
+      },
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1KWd0ZXeOJUliXbdpFPOOzDpJGGJRUKvq/preview"
+      }
     ]
   },
   "GULPOLY": {
@@ -4169,6 +4505,12 @@
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/15kppp8REdNJiEGbfTBys-I9YgAI6GRH1/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/127bicLhfanfluW4E7sfv9pCicHfTuXbU/preview"
+      }
     ]
   },
   "GREENPANEL": {
@@ -4180,6 +4522,12 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1gB5QqbVyNON9vfiI8K1pD7VFCs8e7IBz/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1Sux0BZALfqNuCeZi5EDsoNL09bhzspLj/preview"
       }
     ]
   },
@@ -4197,6 +4545,12 @@
         "name": "Concall Recording",
         "file": "https://drive.google.com/file/d/1h13JYzcLUgblFDnoYScGjUeNf7edx5ky/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1ScnS-i1QEwfEeAdrAN0yRlUF_mqRdjzE/preview"
+      }
     ]
   },
   "GRAVITA": {
@@ -4212,6 +4566,16 @@
       {
         "name": "Concall Recording",
         "file": "https://drive.google.com/file/d/1WwDLmZOaoeF0XOOnAvCbl5KP9i2qxOJr/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Concall Recording",
+        "file": "https://drive.google.com/file/d/1QuyAtBoJEIcLuHUX7Da8AXkZZaCIRuUv/preview"
+      },
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1OdtBQUazGlGKo6svjqA8irFsbIbB9Cwa/preview"
       }
     ]
   },
@@ -4290,6 +4654,10 @@
       {
         "name": "Concall Recording",
         "file": "https://drive.google.com/file/d/1eckAyLlkTXy5SGc-rOA-vibEGPB6b2St/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1QcUSLtTodqhi3RHm4gvzovy7OktzxQ4y/preview"
       }
     ]
   },
@@ -4355,6 +4723,12 @@
         "name": "Concall Recording",
         "file": "https://drive.google.com/file/d/1wDe6V_D-fvy3WJxs9liwQ1ryC2C8DhGU/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Concall Recording",
+        "file": "https://drive.google.com/file/d/1_gk5okt-aEb0u3qnZ81kQJIQvCqOXUUu/preview"
+      }
     ]
   },
   "GODFRYPHLP": {
@@ -4407,6 +4781,12 @@
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1WEHyY41bzbFnTdmwV3oYu_IKomwAi-zU/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1hNwzOwkDgRyc3sMDcb35sGpbf5xvwD_U/preview"
+      }
     ]
   },
   "GMMPFAUDLR": {
@@ -4433,7 +4813,12 @@
     ]
   },
   "GLOBECIVIL": {
-    "Q1-FY2026": []
+    "Q1-FY2026": [
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1tir4g_LMLtIk9NxPCp8SihE0V1DYcJ9Z/preview"
+      }
+    ]
   },
   "GLENMARK": {
     "Q4-FY2025": [
@@ -4486,6 +4871,12 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1-yQK1qsk_LLMbdKr4jaNtx7Pvq03YD7A/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/10BPEXOwVxs5vbiZe3XJwjRXVAzoxRRPq/preview"
       }
     ]
   },
@@ -4583,6 +4974,12 @@
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1NJYodybR_0osFEdjU6gC_mWeugl7PSja/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1qGcQ4RIVkTWYNSwTech2WU3NxOAPp1jD/preview"
+      }
     ]
   },
   "GABRIEL": {
@@ -4594,6 +4991,20 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1J2PQuO2eQ-PvyGr0J0IkcOWKl3BI2O_e/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1LS9K96c5x7TgyEW2A6dTCG7afIFavKeb/preview"
+      },
+      {
+        "name": "Concall Recording",
+        "file": "https://drive.google.com/file/d/1w6T79uRQeQ1LGDdeL9eFuMlBU2EQOPkI/preview"
+      },
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1LE45bXPbUyi8dZWaGyNF-hB2SJRJabd_/preview"
       }
     ]
   },
@@ -4618,6 +5029,12 @@
       {
         "name": "Concall Recording",
         "file": "https://drive.google.com/file/d/1IKRNb4XW_lE066zmEfJPovJ18W8Vb3NF/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1vbdHrWcbNiOq5KNDCGw_oLiZ_ltbgQhk/preview"
       }
     ]
   },
@@ -4647,6 +5064,16 @@
         "name": "Concall Recording",
         "file": "https://drive.google.com/file/d/1l2ICp37-e789rd5pQIJenLLBYIthZUKs/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Concall Recording",
+        "file": "https://drive.google.com/file/d/1F9sq2eU7AgzJj4PMGh4CDWctC2R5XuJ1/preview"
+      },
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1AJK2Z2Bid1UeFDkZo2x9tITpRrDKYEFM/preview"
+      }
     ]
   },
   "FIVESTAR": {
@@ -4658,6 +5085,12 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1UBEiL4A68lxzG2m7aNkfKULkJu_2f1z8/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1AZGpSsWPOC89FiS_0r7EBW_gajG9XsZ3/preview"
       }
     ]
   },
@@ -4678,6 +5111,12 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1WPpbS26Z4TC1YqhjHXQB4KwnOkPV3ou5/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1vHG8GHOvyenTkr-aJnFEMaNP6mGyxkEt/preview"
       }
     ]
   },
@@ -4720,6 +5159,12 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/19eCBuQFTE2az8xQfuyZAXaMTft3QTMlM/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1bjKgciVFowlVfSThFqWHzrSEagVACx-i/preview"
       }
     ]
   },
@@ -4957,6 +5402,12 @@
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1232CtDOa8W7xxwJirEKOiQqgXsNJS3sW/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1fHRcGtEsG-fPLzJxXlEUDo09SEa1Zckx/preview"
+      }
     ]
   },
   "ENDURANCE": {
@@ -4990,6 +5441,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1zniDD8SVChPIYYAhi_Cp1idHbWvCsA5V/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1DfCOOLo8EHSsjIZtEpSEgBhaA87V30Vi/preview"
       }
     ]
   },
@@ -5130,6 +5585,10 @@
       {
         "name": "Concall Recording",
         "file": "https://drive.google.com/file/d/1L--Svnnk7iKhs2puQWNLV3CGeWzs6bcl/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1JuVXREJEXI4x_-mEuQy9Fey5aN6HXlAm/preview"
       }
     ]
   },
@@ -5220,6 +5679,10 @@
       {
         "name": "Concall Recording",
         "file": "https://drive.google.com/file/d/1raUoyKVLfrKHZPSBM-LhhlDb9bJXOatC/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1fBIRvAcM8AsSZxbTxfpzy9-nau9r-sWi/preview"
       }
     ]
   },
@@ -5240,6 +5703,12 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1ZRNQ0EjcpF5KbaVkSGp3ZA5oT8FTcSCF/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/19F1UHB1qvvNYK9lv7io9Ocw_VMV1bhJ8/preview"
       }
     ]
   },
@@ -5358,6 +5827,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1PenLjyl7UQuzO_aiAo2kgP764aPUGysv/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1NqWNmGwGFBc_zx2dGDUcKRZE5j4eCccE/preview"
       }
     ]
   },
@@ -5546,6 +6019,10 @@
       {
         "name": "Concall Recording",
         "file": "https://drive.google.com/file/d/1yZry1Gxk3hDIi2JaG1upRbbKhYYrFBdN/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1htmlOLDnP_EkMC0ga-JfhADyGk6xwkdI/preview"
       }
     ]
   },
@@ -5579,6 +6056,12 @@
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1Ps5NhG9Nz-cgwfHKDVaOlOuoHdiy-QQX/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1vfCOEIU03m1DqSrpCNZBccsMnJLwyblU/preview"
+      }
     ]
   },
   "DBL": {
@@ -5590,6 +6073,12 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1gdaAeW9OOREM-VnB73x8Yo8Mwu4Eu4EX/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/109K4FbQEOOpi_hqM8DS7JaJtBtBXp0Jv/preview"
       }
     ]
   },
@@ -5730,6 +6219,10 @@
       {
         "name": "Concall Recording",
         "file": "https://drive.google.com/file/d/1Z5tAsfTFYL1w_adetPWibzFWcLAmnt-J/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1TI65uRGkHC8_M6YaIQnyhtr_ol2S1l_z/preview"
       }
     ]
   },
@@ -5832,6 +6325,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/10ryIdlWw3CP-LmKr_kSwa6jI-sVE_oR3/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1tWed2XbMG9x9VbnAe06GWp6rX7H3o3ll/preview"
       }
     ]
   },
@@ -5856,6 +6353,16 @@
       {
         "name": "Concall Recording",
         "file": "https://drive.google.com/file/d/175RJAwa95QuSmumfELi5GiWjQNvQcUlp/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Concall Recording",
+        "file": "https://drive.google.com/file/d/1HlkP09JxNb3_BhUvQWrYhQx_JbGAlqnm/preview"
+      },
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1QEeL7GGwc6FUcw7fv7hsjMCfv91aj7-_/preview"
       }
     ]
   },
@@ -5890,6 +6397,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1iYBunplUaNPm2w0FQ7M6VFunPsdYVmNm/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1rPgKwoPj3n5OCF04m5ajWv5agoyXoHsp/preview"
       }
     ]
   },
@@ -5949,6 +6460,10 @@
       {
         "name": "Concall Recording",
         "file": "https://drive.google.com/file/d/1kdbJmrFosFYgkAXsO4JE1UPsQcpNi3XQ/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1ap9IIRE5MGRLOLnqWjqDs0Ac-kqSMZBh/preview"
       }
     ]
   },
@@ -6005,6 +6520,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1aItudwAuhu14ckX2xT6fhU_kbpMfjsLo/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1VxIivzDP8B5iNbi0pUw1N86Mh5VBFJqU/preview"
       }
     ]
   },
@@ -6013,6 +6532,12 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1dVIsfcsnzVg7O5t3-iLUDuR1lxCQAU4F/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1Jhz_xzr0SwT-N2qPA1g7_st8vGqphUyS/preview"
       }
     ]
   },
@@ -6085,6 +6610,10 @@
       {
         "name": "Concall Recording",
         "file": "https://drive.google.com/file/d/1J7vU-Vwb2amv-cCycX-EW3InjioAzzOI/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1gVSj13xvoNRFI2b8ghrN1dIIppOWZ-cS/preview"
       }
     ]
   },
@@ -6105,6 +6634,12 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1sSHBleFzAJ0LJGZUM6TGaZyBJtJyITKN/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1lkewwneqa2Ifm0OphQEgTqDqu0WqSsdK/preview"
       }
     ]
   },
@@ -6163,7 +6698,12 @@
         "file": "https://drive.google.com/file/d/1Z4slyAhd8vjp8cMqUsiVP1YvPUmx-eq9/preview"
       }
     ],
-    "Q1-FY2026": []
+    "Q1-FY2026": [
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1DWqbSQ9Zgn4AOIkvQKGXup-RoxMxxGcV/preview"
+      }
+    ]
   },
   "CGCL": {
     "Q4-FY2025": [
@@ -6216,6 +6756,10 @@
       {
         "name": "Concall Recording",
         "file": "https://drive.google.com/file/d/1kq52jaKaKnlHnaYFB-kFTFLdwSmeiYUm/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1EBzRef1IHEf99E3LHX3jyNhpLVg03Y2z/preview"
       }
     ]
   },
@@ -6339,6 +6883,16 @@
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1Uzzbkz6hqTvkGQczstxDJUE8tdKxzWN0/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1_Q12Q24Prdv263YLD7uTsPWx6Kkd6ckM/preview"
+      },
+      {
+        "name": "Concall Recording",
+        "file": "https://drive.google.com/file/d/1THgpwjo9jUWJvAJvNTfK5eXEnX0pOMfs/preview"
+      }
     ]
   },
   "CARERATING": {
@@ -6444,6 +6998,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1MuFK89A_-W7MM6K41ISN8V28msrCp1ma/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/13I3s7S3i-bYqG81v3SYOQ_hYOaeCFMd_/preview"
       }
     ]
   },
@@ -6460,6 +7018,12 @@
       {
         "name": "Concall Recording",
         "file": "https://drive.google.com/file/d/17jcU6YNL3AlLe1dXIJqE-ITaRMumVu55/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/14aepcCCWXctN9WtdMzbb9_jiiC4zvbj-/preview"
       }
     ]
   },
@@ -6550,6 +7114,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1t6Wnmndz3VaS4HPCGqwWtSbiLJzTZrBN/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1Pj-RkVwUU8xVFUIP4hb-A4arILyMUGmA/preview"
       }
     ]
   },
@@ -6588,6 +7156,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/19XlWkCwkNgFxk3bfom-_vNdoUeRM3HAb/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1a7ssHhVD4CWbutDDZv_hjnIjS-AT1Xm2/preview"
       }
     ]
   },
@@ -6658,6 +7230,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/18O9B3V39VNX3PZYGhfwr73k6yK-FYMa0/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1lFGujrSopu7Lastr4yYztpgWDWcFTwIO/preview"
       }
     ]
   },
@@ -6788,6 +7364,12 @@
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/198gX3otIRuGJFN4fYOXyLHGguBzSjbwE/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1p4htDLZrOtWqQ3nyChXes8cf1ArghJeJ/preview"
+      }
     ]
   },
   "BANKBARODA": {
@@ -6805,6 +7387,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/11FwEHc5h3MNCR_yVxlP5phQDqQY7A0Lv/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1Savsxd1J7WRM0aRYeh2g-vzPQLklJzy2/preview"
       }
     ]
   },
@@ -6879,6 +7465,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1n02kqRz1-aJwbSQyiwzRlv5pjTG5SFDW/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1Co-2U9aiheGbVj04XirG5wCM_T3AX0YI/preview"
       }
     ]
   },
@@ -6897,6 +7487,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1krkaQAi-MhuVO38yy6vvJZKEAvloHENr/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1I0igroyfEi3VLUPwBws6HakrVM148G_p/preview"
       }
     ]
   },
@@ -7053,7 +7647,12 @@
         "file": "https://drive.google.com/file/d/1JgRqu7ba-ZxRCdebcFHLh8cfG0YPWp04/preview"
       }
     ],
-    "Q1-FY2026": []
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1AzjjQLg1HzO05nd0xy83BMTxyAXBwkKn/preview"
+      }
+    ]
   },
   "AURIONPRO": {
     "Q4-FY2025": [
@@ -7070,6 +7669,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1s0IcLvHYKsUZnCBAdvWlUa6ThnUHEmmb/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1X2cVm4IsOP1Mk6cl38chhHYtVWpK_iiV/preview"
       }
     ]
   },
@@ -7100,6 +7703,12 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1Axdjyk7cPN-PxcQPTsmR_HT_5zh_8kGH/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1ObDRK29Wsmerz0sRLx0Kx0ixAH6Xv3Q5/preview"
       }
     ]
   },
@@ -7137,6 +7746,12 @@
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1zJ7YvHI6BSlAriidcbuCksi9kefE-RPF/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1LtQ7ZhfWwYo7tgb6Rs2pdYwge066_9_4/preview"
+      }
     ]
   },
   "ASTRAMICRO": {
@@ -7165,6 +7780,12 @@
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1jOMdcK6N7HfFvX-6Glpxe8ydlu0F2MG3/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1fqbEfBuoh2MPxqd_ffzxdPAQ33NtqjBa/preview"
+      }
     ]
   },
   "ASKAUTOLTD": {
@@ -7177,6 +7798,12 @@
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1D1KoD3Zu2iEg1fSwXMGoUDD_gjYjhiwF/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1K1Nf4Rl3jwDvNloEpofGKIyHkXtXAXvA/preview"
+      }
     ]
   },
   "ASIANPAINT": {
@@ -7188,6 +7815,12 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1h11pEzt3u1w-IG7Ielu-aF-M1GqNALkx/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1aHGOp0ikdv40I9WuwXy0adcFoI0b7Lc4/preview"
       }
     ]
   },
@@ -7253,6 +7886,16 @@
         "name": "Concall Recording",
         "file": "https://drive.google.com/file/d/134JXkMnCJI72vw_x70PHw41OM66Pry_L/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Concall Recording",
+        "file": "https://drive.google.com/file/d/1waWodsQzOSYNUshisM5KI5IenzViPcVS/preview"
+      },
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1nsNj5iQceRNDAr--pO6RCitijs51e959/preview"
+      }
     ]
   },
   "ARVINDFASN": {
@@ -7265,6 +7908,12 @@
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1iV8lphMmtotARlFq_IRLSq2z1J10WTuZ/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1sFvMj2NmfRZnRhok0Mn5B4kP3wG76JMF/preview"
+      }
     ]
   },
   "ARVIND": {
@@ -7276,6 +7925,12 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/17IcJjVJxNyHZRSLVWy57a27t29nKpfZj/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1R2AAOj6j7TF4GL0_OSA6PajTdN4Uuxdc/preview"
       }
     ]
   },
@@ -7375,6 +8030,12 @@
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1ahgVZdMjq5IBiPUfXD-Pjs0rG8a9kRHn/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1-Rqbab1c_TZqwcOULiHzBqR0zCUdHC9I/preview"
+      }
     ]
   },
   "APLLTD": {
@@ -7436,6 +8097,16 @@
       {
         "name": "Concall Recording",
         "file": "https://drive.google.com/file/d/1n8otHyfJpjPOyyLgFLi_rKyE91A1Myg8/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Concall Recording",
+        "file": "https://drive.google.com/file/d/10HY3tHI_fzHM8qMze1t_5dThtLp5Uueg/preview"
+      },
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1AVIOOgm0uNWRrFzb8rdAhn96IwNKVmDH/preview"
       }
     ]
   },
@@ -7559,6 +8230,16 @@
         "name": "Concall Recording",
         "file": "https://drive.google.com/file/d/1nIbsv7HFHK4yvBVxRPtLfI5UKBUqmiY5/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Concall Recording",
+        "file": "https://drive.google.com/file/d/1ybdw0ncHhwqffY7RyvrGwAteadbMb_KI/preview"
+      },
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1ntnLIZsHZ4e-pfwAQvLFXR0qLi3w4qe9/preview"
+      }
     ]
   },
   "ALLDIGI": {
@@ -7644,6 +8325,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1zO24jlERB3ESI6rspxIY_1eF7-SvRuY7/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/123ug-ZdxqwkxCULWkEWRI-vDlcje5kQA/preview"
       }
     ]
   },
@@ -7656,6 +8341,12 @@
       {
         "name": "Concall Recording",
         "file": "https://drive.google.com/file/d/1EhU293MccqCVyQWxK5bWT_xdhOPv8tTT/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Concall Recording",
+        "file": "https://drive.google.com/file/d/1fIiyrUDW_vRifgG1Xro0gqbpn3XxR5SY/preview"
       }
     ]
   },
@@ -7682,6 +8373,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1yQzihE7UTx5jbfI8849hSifUpZcAOZQF/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1cjVs7pNZJl_VFN8xW6Cep1G3xUo9Apji/preview"
       }
     ]
   },
@@ -7742,6 +8437,10 @@
       {
         "name": "Concall Recording",
         "file": "https://drive.google.com/file/d/1pGrYJg7CLrLZjEjLnty2MRznAvlN4FyO/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1EJu4TfIqhFg-heDdlsM1D7lv-f0Dr_uN/preview"
       }
     ]
   },
@@ -7758,6 +8457,16 @@
       {
         "name": "Concall Recording",
         "file": "https://drive.google.com/file/d/19tEwNobHRLTz2_k0cbbBhrLiaQD9wkrk/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1K8-g8sihkGCtxdjSRvWibj7dn7rehKw7/preview"
+      },
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1fNcPotRVgbbOAj6eqOhl_ppCyFSEuOs0/preview"
       }
     ]
   },
@@ -7799,6 +8508,12 @@
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/125Fam1nBsDX641gmpd1C8nMUClSfQmMG/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1uAZ7pwrG-pcjHNkCq8eUAi7kCrt0dAZT/preview"
+      }
     ]
   },
   "ADANIPOWER": {
@@ -7835,6 +8550,12 @@
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/15vLs0gE93BdabPo5qi6I_3zOjOlxLsp4/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1aYns5F1rrXa4ON0BaWDYY8Nb58lNvrI4/preview"
+      }
     ]
   },
   "ADANIENT": {
@@ -7864,6 +8585,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1KZ8CYv3recrlKaaXoThoZajviXcECszn/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1qZXP2PXLG-uKwo7CdnUTHj3oQT5xT7Mw/preview"
       }
     ]
   },
@@ -7880,6 +8605,16 @@
       {
         "name": "Concall Recording",
         "file": "https://drive.google.com/file/d/1bLDTUlchiTrYa0RtX8B1LWFpo9KwciCp/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Concall Recording",
+        "file": "https://drive.google.com/file/d/1COISB-Xrmr1TafKvEPYX23KWJ92HAYmR/preview"
+      },
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1rEfe-YLuEiapZzc8PGRZAiDf0ZVBB7me/preview"
       }
     ]
   },
@@ -7923,6 +8658,12 @@
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1zqeC38Nj9Ni0VxPhGskj13SCaFZ6Xd6D/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1_B42VLveTWlWYCY8CfpczrZmDsfu4jI_/preview"
+      }
     ]
   },
   "ACC": {
@@ -7960,6 +8701,10 @@
       {
         "name": "Concall Recording",
         "file": "https://drive.google.com/file/d/19pnHeYWL0EW2zKFFm3adZchDkG8yhzmw/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1sZzFyyNusj_p6VrMTvdaY3IJJJGaEhGN/preview"
       }
     ]
   },
@@ -7978,6 +8723,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1t4m4tJppSWeUgQKZ0y4RDEz2xlEvlHhq/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1nOMXAkidsui4VhtesDnfXYCZvxBOvAkA/preview"
       }
     ]
   },
@@ -8004,6 +8753,10 @@
       {
         "name": "Transcript",
         "file": "https://drive.google.com/file/d/1s3O5OnuGd6Cst_Y2JVJKQ2Cu7qZ_ZnkW/preview"
+      },
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1U-lQ23OHbRM5qcpEmNlh5L58Zyx3Q9t4/preview"
       }
     ]
   },
@@ -8219,6 +8972,12 @@
         "name": "Transcript",
         "file": "https://drive.google.com/file/d/1Z5J1rnFtoLZLhhRzGDMPUFSLq8t8qTKm/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1W0lsMoBN4l8LenIcABYJYlb4-_uiz0-r/preview"
+      }
     ]
   },
   "PNBHOUSING": {
@@ -8260,6 +9019,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1Iw9w3_cnXUJNapMhaUEitYotRT_3eJ3A/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/14BnLIsnVZ6_C6FnTcJWGMUC9jlW6ek7O/preview"
       }
     ],
     "Q4-FY2025": [
@@ -8359,6 +9122,12 @@
         "name": "Transcript",
         "file": "https://drive.google.com/file/d/1_1eCcEsCLei3rSP3soYU6vqVF4HasET9/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1z-JrUeLXb3LNQ8PJAZTKuUmXAv3PLFev/preview"
+      }
     ]
   },
   "POWERMECH": {
@@ -8395,6 +9164,12 @@
         "name": "Transcript",
         "file": "https://drive.google.com/file/d/14yGj58IO3M4R4KDRvvihI2c6TIgtTJZz/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1DD6A7E1dW1Fl0iLGdWS2BTmq_RE27tAp/preview"
+      }
     ]
   },
   "PRAJIND": {
@@ -8422,6 +9197,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1HkOwBaRsx73XdP9P0mXENtn5H7hbegrF/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1MNFmgJWTK-zQAu_eAieWrxCeH6TTRSKJ/preview"
       }
     ],
     "Q4-FY2025": [
@@ -8521,6 +9300,12 @@
         "name": "Transcript",
         "file": "https://drive.google.com/file/d/1AinKrZ-a4E6GpgAsrLvwOW70yQ5q-pqU/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1UZJzFX85d9pPMVMO2jow-cUy-D2U1Vy_/preview"
+      }
     ]
   },
   "PSB": {
@@ -8528,6 +9313,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1EcnwBwjDjPWKxXfqMNpooTLLVi2qbWS5/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/18abSxHxXHGaxPw0ThgX4xCHM9jP1iVKK/preview"
       }
     ],
     "Q4-FY2025": [
@@ -8551,6 +9340,16 @@
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1H-XTSIBAKbEDalof92p4wDcUQiNOkTZ1/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1UsU3ZuDy_gn5zrx6LI99ZABqCruiG_z8/preview"
+      },
+      {
+        "name": "Concall Recording",
+        "file": "https://drive.google.com/file/d/1mlqcIV2RRCJVuFQVWZFNLyDcUTFogDZc/preview"
+      }
     ]
   },
   "PUNJABCHEM": {
@@ -8562,6 +9361,12 @@
       {
         "name": "Transcript",
         "file": "https://drive.google.com/file/d/1MxdC8Ym2Y44NBow6EmTxWHoOiTm_rWLc/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1twEPY7AriQkjiSx4l5KIDZJnxC_CAR8C/preview"
       }
     ]
   },
@@ -8586,6 +9391,12 @@
       {
         "name": "Transcript",
         "file": "https://drive.google.com/file/d/1Z4DAqDfxybYdn490wUXKIp5iGaFEVRnm/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1nf23Gvdu01c820GR_QE1rc9MdSAe5YIR/preview"
       }
     ]
   },
@@ -8615,6 +9426,12 @@
         "name": "Transcript",
         "file": "https://drive.google.com/file/d/1b1fyW2PEKVoVWouL5GN1mdxFrYCvLdp3/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1eNPiAAKf9TaXdOnrebREgBqFNzvbbVMl/preview"
+      }
     ]
   },
   "RADIOCITY": {
@@ -8622,6 +9439,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1c9Qq1s9pzHbH1FbT5P3jf_PhHgO9u72v/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1JgdeaoYACOXQHPrkoUSQUE90xjumQ1Km/preview"
       }
     ],
     "Q4-FY2025": [
@@ -8660,6 +9481,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1l1Wz1zyBwiDONUAu8wfYQ56UXkBF0_z4/preview"
+      },
+      {
+        "name": "Concall Recording",
+        "file": "https://drive.google.com/file/d/1Q6CNtEIxcoqDQcr1FIJMsJn92C_rKEUU/preview"
       }
     ],
     "Q4-FY2025": [
@@ -8819,6 +9644,12 @@
         "name": "Transcript",
         "file": "https://drive.google.com/file/d/1lFuR8yRwGV01xTCDlGMypIbZKfcSMZey/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1jWlkIEMBZS429W-lYbH-EbWj8ntWQIPz/preview"
+      }
     ]
   },
   "REDINGTON": {
@@ -8830,6 +9661,16 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1z3O-_mm6oz4QlLyIVVWmIvDz3SF_P0jR/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Concall Recording",
+        "file": "https://drive.google.com/file/d/1TcbzEonjEYR8Fbs94iEI0NmQIysVpdah/preview"
+      },
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1R0h-iyP6oZ3E9dKtDhYWvpr8OigJbUq5/preview"
       }
     ]
   },
@@ -8858,6 +9699,12 @@
       {
         "name": "Transcript",
         "file": "https://drive.google.com/file/d/1sQEIlH9Am_qPwXBal6e82dbJP7c62hTR/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1X-znrrLGy0yMh0mlC6t_YktShKf_qD7C/preview"
       }
     ]
   },
@@ -9133,6 +9980,12 @@
         "name": "Transcript",
         "file": "https://drive.google.com/file/d/1z5-mNi1ScXjF0FFnkDUkY8z3xpFYAJyh/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1BYqEryc5KeGSLUQoxMqJoEyPxBZqJVFN/preview"
+      }
     ]
   },
   "SAH": {
@@ -9168,6 +10021,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1M1gXiRjX0NWb9k_yjEt_q8akKaCPtH0p/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1Ud-JDr5GK9EkAU7teQEK_iCyRKFck-xk/preview"
       }
     ]
   },
@@ -9224,6 +10081,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1hA2AyRNpOh4_9kv8wdyMQh1L_bXzymMA/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1RORXsl9pDLsRhNnL2ufxsbD5T71eg19A/preview"
       }
     ],
     "Q4-FY2025": [
@@ -9358,6 +10219,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1DjjkM6j4A2gK02trxLbycEAz6IcVPy_1/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1oxGuozA5tRltiLHLYUOuvbj9tjqkC864/preview"
       }
     ],
     "Q4-FY2025": [
@@ -9395,6 +10260,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1v17qHfARXcDECUSHs4Na897qdtnHFprO/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1Ri0ll0QQKKbegjx_JjfZXLZr62gcyave/preview"
       }
     ],
     "Q4-FY2025": [
@@ -9501,6 +10370,16 @@
         "name": "Transcript",
         "file": "https://drive.google.com/file/d/1u_-E-3mtfFEskH-t-YjjESBKHLnwhkzY/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Concall Recording",
+        "file": "https://drive.google.com/file/d/1PX9tQS_83fBujF8d0FjPt9Xu5ovbdfGx/preview"
+      },
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1SrqOTes_MwkK6_w7L_g6LnPjHIDHoBeO/preview"
+      }
     ]
   },
   "SHARDACROP": {
@@ -9542,6 +10421,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1r18GOcmNioJkiIepCpNARVau3yJPQOAe/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1OYBwNTfqC3e7xdppkqL65-I0q8ecGOPP/preview"
       }
     ],
     "Q4-FY2025": [
@@ -9630,6 +10513,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1AdWclIQfqVIkSlJjGWY8MWjencLbyr-u/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1Yv-3EwU95vzDg4HR0hzILaTnrP6wwHoL/preview"
       }
     ],
     "Q4-FY2025": [
@@ -9644,6 +10531,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/11orK0LWjIpQjwhseOAwnZMhZ5-q7kynd/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1ws1YwJNaKXQsUCnAWO2q26dZADiz6dqK/preview"
       }
     ],
     "Q4-FY2025": [
@@ -9735,6 +10626,12 @@
         "name": "Transcript",
         "file": "https://drive.google.com/file/d/1KGqtjG4DV8EqTbbYp1wLydU_0niLawn3/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1zTx5k-g5E7zIwgiA575om-EAYC-Hv9g4/preview"
+      }
     ]
   },
   "SJS": {
@@ -9742,6 +10639,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1iULJhQuQvVvwNa4ofxxnfpY78Q-VhB07/preview"
+      },
+      {
+        "name": "Concall Recording",
+        "file": "https://drive.google.com/file/d/13PAS0LeKqM8xrGsl5TNh4ICngiOGbICB/preview"
       }
     ],
     "Q4-FY2025": [
@@ -9785,6 +10686,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/18QXBbnwwt6vG7Pi2iozcgoqFjGMg_bBR/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1eOCMrndiJAcjBTEu52di5Oy-jQ5a4BI-/preview"
       }
     ]
   },
@@ -9801,6 +10706,16 @@
       {
         "name": "Transcript",
         "file": "https://drive.google.com/file/d/1d06r2Z3URKF0ZA0B2oERvv-B5Dg_u_kx/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Concall Recording",
+        "file": "https://drive.google.com/file/d/1BVQP5mh3oO9fYKNmFKffA4zehrFudqG-/preview"
+      },
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1kmB4ZtPPwF51GsBqdoDlBJDdE8cvJalD/preview"
       }
     ]
   },
@@ -9829,11 +10744,20 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1jy0QfsmonEi4ZuU4dy4tQ5eeB9m_r47C/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1Fq_t4jz5WbH4mM7SEcPrA8ZKGHNgCkE-/preview"
       }
     ]
   },
   "SOLARA": {
-    "Q1-FY2026": [],
+    "Q1-FY2026": [
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1BtU5RERSDJUDid22At_TQDcf7rF88Ed1/preview"
+      }
+    ],
     "Q4-FY2025": [
       {
         "name": "Concall Recording",
@@ -9900,6 +10824,12 @@
       {
         "name": "Transcript",
         "file": "https://drive.google.com/file/d/13rak2I98vcEhRAzL2S_UQ0i0fhW7-rkO/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1p2eGPAXF2aSKARTGbfB0PwxRu1WvYH16/preview"
       }
     ]
   },
@@ -9981,6 +10911,12 @@
         "name": "Transcript",
         "file": "https://drive.google.com/file/d/1_sm2OIGBwpgL3xNE1va264jKot38GKEq/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1JeGeDMNlx37251SvmQ1a9ChMjVjf3BhV/preview"
+      }
     ]
   },
   "SPLPETRO": {
@@ -9988,6 +10924,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1NkdPexb1jl2vhj0Zp4tb4i3A2iqzLDKZ/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1XIdM953snH8--8kFQ6zIHrUdicceWFbU/preview"
       }
     ],
     "Q4-FY2025": [
@@ -10084,7 +11024,13 @@
     ]
   },
   "STAR": {
-    "Q4-FY2025": []
+    "Q4-FY2025": [],
+    "Q1-FY2026": [
+      {
+        "name": "Concall Recording",
+        "file": "https://drive.google.com/file/d/1NYeh2dHI0CpSbWB0hUdkJJG_SnJ3M5Rt/preview"
+      }
+    ]
   },
   "STARCEMENT": {
     "Q4-FY2025": [
@@ -10107,6 +11053,16 @@
       {
         "name": "Transcript",
         "file": "https://drive.google.com/file/d/1bWTa-qmQa4iyiUsmnYF0yVmhWO0_rwEH/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Concall Recording",
+        "file": "https://drive.google.com/file/d/1LnKcrjqTqQr-U7qVN6IA4nJOEcDs57Om/preview"
+      },
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1MtDG8OLDEphxq3umnRH-_qD1jfNpEFdp/preview"
       }
     ]
   },
@@ -10280,6 +11236,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1_hDHVYH8wpC_vGlamcPz4-08wrPUVyfN/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1AwM1JEfzKsLFqFk_rnRZLD_ashcbRSI6/preview"
       }
     ],
     "Q4-FY2025": [
@@ -10326,6 +11286,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1ZGMZV4wNqh5WgjEZASYhUg6GknLj_gCP/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1L-ExXNMQZZlb10apUoQfuGhMYHrWdgZ0/preview"
       }
     ],
     "Q4-FY2025": [
@@ -10422,6 +11386,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1RmCariZC3qdcqPld2OD-57Lm6fBVvbBI/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1lYlEkyiiYgHbUBa1w4sOvdTB_XSkVbFJ/preview"
       }
     ],
     "Q4-FY2025": [
@@ -10440,6 +11408,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/12ulBtgrNQGlVeQ1v4hBt7D2KZs_Xrn1X/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1Fvts-4btnrkRIpipIjOuqo6mHNvpxZhu/preview"
       }
     ],
     "Q4-FY2025": [
@@ -10462,6 +11434,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/17qEJ-FmirB6zgltf71bpyRjU6FVb141C/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1OL7TFzsOKCgcycWSLboi1XPvd3Diizcz/preview"
       }
     ],
     "Q4-FY2025": [
@@ -10540,6 +11516,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1arlfmWl-wwR0dYdq-tGU2ExZvux3a_wp/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1DwwddOO-X9JMVuysLgyPHG3b84DiX5RX/preview"
       }
     ],
     "Q4-FY2025": [
@@ -10585,6 +11565,12 @@
         "name": "Transcript",
         "file": "https://drive.google.com/file/d/1h38MeHKguauSzMnncIRAxi0uWIAq31j4/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1Vc6gnEcyT7cNTI6-h2Him8dimWlU8hY4/preview"
+      }
     ]
   },
   "TATAPOWER": {
@@ -10608,6 +11594,12 @@
       {
         "name": "Transcript",
         "file": "https://drive.google.com/file/d/1KEzY7KnT-WlCuyjRWfVzqWsk_M0GkG6k/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1yhPQwBRuxXtMynz_PUVQHaa-l6Dr-51S/preview"
       }
     ]
   },
@@ -10642,6 +11634,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1GMdYCW_3zvuBzj2JHINCDc2-cfDlTnXE/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1BId5wLInUUp4OniYS7UsAiFDckSqbona/preview"
       }
     ],
     "Q4-FY2025": [
@@ -10676,6 +11672,12 @@
       {
         "name": "Transcript",
         "file": "https://drive.google.com/file/d/1cCk6zL9Sf4_peC99Sl0LLNqZ2Wgkpiw9/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/12Gq-4KlDAtrD6dXvQo2ZYRJfXFRAD_rs/preview"
       }
     ]
   },
@@ -10802,6 +11804,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1CjOJ513ziwVd5jG_hnRnnLg7GSimqVoF/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1r_tsiO4B-T-uDNGN8l9ofVViUc8bw2jF/preview"
       }
     ]
   },
@@ -10839,6 +11845,12 @@
         "name": "Transcript",
         "file": "https://drive.google.com/file/d/1mBz9OCORHWm161fUZKqVrE1IPMs7R-vp/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1hyix1c_TFhjj9t3xXZRUWdvNRdJpSXKL/preview"
+      }
     ]
   },
   "THYROCARE": {
@@ -10846,6 +11858,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1cJW5or43ybMOuFA95OhucXBZ5AYY9nqb/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/18w0A8n5wNMOGHh_md0x7HNFgYkS5e8zG/preview"
       }
     ],
     "Q4-FY2025": [
@@ -10906,6 +11922,12 @@
       {
         "name": "Transcript",
         "file": "https://drive.google.com/file/d/1NGd55B8hFH2EslyLpWQtAY3A-P-G5ezL/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1alEd9FnV2Z6N84hw3KnsAz2_0pjgJwxc/preview"
       }
     ]
   },
@@ -10970,6 +11992,16 @@
       {
         "name": "Transcript",
         "file": "https://drive.google.com/file/d/1MSUeAN8tiyFKCWiQIl4MzYbQu336HGZq/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Concall Recording",
+        "file": "https://drive.google.com/file/d/1SdxU7gkv4JfLWK1eoDnVq8LOmqQt__9b/preview"
+      },
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1GrjqJK52xcNb5S2bB32AecKBNLF047gj/preview"
       }
     ]
   },
@@ -11080,6 +12112,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1ov_AHnpiJlTOzG9S_QWWZRgwtOKCbox3/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1ltPyQ2z0xq5hdtRzCU4E8NMz8cx5Hj3j/preview"
       }
     ],
     "Q4-FY2025": [
@@ -11102,6 +12138,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1NtqBO-UD6hpHfSdDpD-prEcZ7rmTOsal/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/14ABniJBX1tdsQrM96o8k4QbVjah6qr4j/preview"
       }
     ],
     "Q4-FY2025": [
@@ -11156,6 +12196,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1wExQNJvXf9JOHfI7gJIHsAYnmrlvpVo0/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1wQdp0nYt633K0Gx4_ttRCjhkL0ha8AbD/preview"
       }
     ],
     "Q4-FY2025": [
@@ -11204,6 +12248,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1t9YWX_ItFS-l_eKrO1mcqOgLk_8mSe2q/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1oMbUVoTnZb6KeTvvr8ym8mAI9SAI-vB_/preview"
       }
     ]
   },
@@ -11367,6 +12415,16 @@
         "name": "Transcript",
         "file": "https://drive.google.com/file/d/1mOTUNFUtK0EJUsjxPmzr1_4cfu0u02m6/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Concall Recording",
+        "file": "https://drive.google.com/file/d/1yU9HWznB6pDdqkWd2IGXE_wetv4qLc0J/preview"
+      },
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1V5FmeelyULhkBsKQIRYE3wm8GFYe1DZe/preview"
+      }
     ]
   },
   "VEDL": {
@@ -11411,6 +12469,12 @@
         "name": "Transcript",
         "file": "https://drive.google.com/file/d/1DT6RxAOcwAdgxDCK5_4kfdubl611SYf3/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1VDqHrBqExWZMZQ0edF_YSek6VBCy5bCC/preview"
+      }
     ]
   },
   "VHLTD": {
@@ -11431,6 +12495,12 @@
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/13b-ccY8nuolnJw7KqI7sXuiloeLNd6ma/preview"
       }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1JcxW67kkClu8mdP1QGqauGG5eDdkH6Bl/preview"
+      }
     ]
   },
   "VIJAYA": {
@@ -11442,6 +12512,12 @@
       {
         "name": "Transcript",
         "file": "https://drive.google.com/file/d/19LK4KM7hlQBLIxZ88zXWOUmedY6FrxZL/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/15lbxkCDGf8VFIIealGK49RVwpQS9cq-t/preview"
       }
     ]
   },
@@ -11530,6 +12606,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1dCqmWH-Mq6neYwmbQkbZU_uds1Gst4bJ/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1AzDrtetxY3Dkn4B8xMdf8qW08PzaQu1X/preview"
       }
     ],
     "Q4-FY2025": [
@@ -11584,6 +12664,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1DMbrMNgq7X3ZVkGRc-jb2sxex2byGpnn/preview"
+      },
+      {
+        "name": "Concall Recording",
+        "file": "https://drive.google.com/file/d/1CrXxaBHGwjP-tczOWEjIxZUF6uC3ff4u/preview"
       }
     ],
     "Q4-FY2025": [
@@ -11622,6 +12706,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1WZBEGvxTsmc86pHZb7Ii0KzN5Y6A_d1D/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1AK_uijNXu9AOM6K_x2bW8rUhED72I25i/preview"
       }
     ],
     "Q4-FY2025": [
@@ -11644,6 +12732,12 @@
       {
         "name": "Transcript",
         "file": "https://drive.google.com/file/d/1GTr-SOYLodMG1nhuC_xEdWEXp2fijyYX/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1mk412Wn90aX7zRCT5oDu0tAZGSgeOOpa/preview"
       }
     ]
   },
@@ -11750,6 +12844,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1SbYYva-W95VEhvCQ9bp23KsN6PNnpmLG/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1mUhFzx4YL2zt_yCR0cy3yz_BQQv7zHv4/preview"
       }
     ],
     "Q4-FY2025": [
@@ -11872,7 +12970,12 @@
     ]
   },
   "ZEEL": {
-    "Q1-FY2026": [],
+    "Q1-FY2026": [
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1i_nEvxsS9a-KxwW5IDoVJ6ryKqhv1SRE/preview"
+      }
+    ],
     "Q4-FY2025": [
       {
         "name": "Presentation",
@@ -11889,6 +12992,10 @@
       {
         "name": "Presentation",
         "file": "https://drive.google.com/file/d/1SoOtGupPZaeRpO0-1d4wRm9IfYRkrqKo/preview"
+      },
+      {
+        "name": "Transcript",
+        "file": "https://drive.google.com/file/d/1CXuie0LjmrTHH6RkSBKI-rr6pFv1bGG4/preview"
       }
     ],
     "Q4-FY2025": [
@@ -11915,6 +13022,12 @@
       {
         "name": "Transcript",
         "file": "https://drive.google.com/file/d/12JSHay5ANKrk6YM277WvXFi-ChnXd40c/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1ibNRUIQHLyMh7rVOap6Fm7Az5HZjieEf/preview"
       }
     ]
   },
@@ -11967,6 +13080,132 @@
       {
         "name": "Transcript",
         "file": "https://drive.google.com/file/d/1WWHDqeejq4ZaIWDfGtP_oWaa_3A38hJs/preview"
+      }
+    ],
+    "Q1-FY2026": [
+      {
+        "name": "Concall Recording",
+        "file": "https://drive.google.com/file/d/1B10PPM_5AsM60p2Nufa1ieZO0557OIlV/preview"
+      },
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/12cRIqan7G203o3X8By-lcV3xX_Ug3wR_/preview"
+      }
+    ]
+  },
+  "WELSPUNLIV": {
+    "Q1-FY2026": [
+      {
+        "name": "Concall Recording",
+        "file": "https://drive.google.com/file/d/1jZmQXDlgfIZjZY1_qPlui5ZbMDg9nuUC/preview"
+      },
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1k4kMffD08LnS5VdhbKJZdb9fkWWO2Rwp/preview"
+      }
+    ]
+  },
+  "TRIVENI": {
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1InvgsCVzZMVONiToAYFlfhH6BQFJl1YI/preview"
+      },
+      {
+        "name": "Concall Recording",
+        "file": "https://drive.google.com/file/d/1M6tkb7wOGP4Ap659kC8R2qvmOzZXrlS2/preview"
+      }
+    ]
+  },
+  "JINDRILL": {
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1Mi4kBmKPwTzKY9ZIJyq8zcvzdiXOXaMx/preview"
+      }
+    ]
+  },
+  "WELCORP": {
+    "Q1-FY2026": [
+      {
+        "name": "Concall Recording",
+        "file": "https://drive.google.com/file/d/1SO0_WCcMLHqM8ZgCB3wUZO5roMbWLpZ9/preview"
+      },
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1zdsD2dCWXII4iLZFr-APw37tOw0accvW/preview"
+      }
+    ]
+  },
+  "OCCLLTD": {
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1XkomVSnoJkLrjtrNeIoTeyco7LqKH6uI/preview"
+      }
+    ]
+  },
+  "MAHSEAMLES": {
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1dH_pFrxBgull9JxYsPZigcmS5Rlt_fUP/preview"
+      }
+    ]
+  },
+  "GATEWAY": {
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1OtUf3beo9A27d4fpmq_92ci8Wynd1Ysi/preview"
+      }
+    ]
+  },
+  "SNOWMAN": {
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/11YqCwFQS4pY3RbEc1hoaEWowzoi7HnZ3/preview"
+      }
+    ]
+  },
+  "SUDARSCHEM": {
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1LM8BolW3rYoxl_Z6peQgRg9d96xywfF0/preview"
+      }
+    ]
+  },
+  "KEC": {
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1-Xfuda351-h-MZ_sosoHB-7c5KbZNEsg/preview"
+      }
+    ]
+  },
+  "TTKPRESTIG": {
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/112avxZSS7TyHJzmaeQHWDeTufXxj-9k9/preview"
+      }
+    ]
+  },
+  "VERANDA": {
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/1wcpQv7Cq0hvj-glg2Y8dz73HKF4TukwM/preview"
+      }
+    ]
+  },
+  "SAIL": {
+    "Q1-FY2026": [
+      {
+        "name": "Presentation",
+        "file": "https://drive.google.com/file/d/10q_24PclgUXbapJ4u5SJScrg0a8uAqkB/preview"
       }
     ]
   }
