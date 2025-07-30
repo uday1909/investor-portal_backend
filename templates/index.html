@@ -1,45 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>📊 StocksLedger - Investor Hub</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>📊 StocksLedger</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      text-align: center;
-      background: #f9f9f9;
       margin: 0;
-      padding: 4rem 2rem;
-    }
-    h1 {
-      font-size: 2.8rem;
+      padding: 0;
+      background: #f7f9fc;
       color: #2c3e50;
+    }
+
+    header {
+      background: #fff;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    header h1 {
+      font-size: 2.2rem;
       margin-bottom: 0.5rem;
     }
-    p {
+
+    header p {
       font-size: 1.1rem;
-      color: #666;
-      margin-bottom: 2.5rem;
+      color: #555;
+      margin-bottom: 1rem;
     }
-    .btn {
+
+    .cta-buttons a {
       display: inline-block;
-      background: #007bff;
+      margin: 0.5rem;
+      padding: 10px 20px;
+      background: #007acc;
       color: white;
-      padding: 12px 24px;
-      border-radius: 6px;
-      font-size: 1rem;
       text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
       transition: background 0.3s ease;
     }
-    .btn:hover {
-      background: #0056b3;
+
+    .cta-buttons a:hover {
+      background: #005f99;
+    }
+
+    .section {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .feature {
+      flex: 1 1 calc(50% - 1rem);
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+    }
+
+    .feature h3 {
+      margin-top: 0;
+      font-size: 1.2rem;
+    }
+
+    .preview {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+      margin-top: 2rem;
+    }
+
+    .tools a {
+      display: inline-block;
+      margin: 10px 15px 0 0;
+      padding: 10px 15px;
+      background: #eaeff5;
+      color: #2c3e50;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .tools a:hover {
+      background: #d8e5f1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #eef2f7;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      .feature { flex: 1 1 100%; }
     }
   </style>
 </head>
 <body>
-  <h1>📊 StocksLedger</h1>
-  <p>One-stop platform for Investor Calls, Presentations, Transcripts & Comparisons.</p>
 
-  <a href="/investor-desk" class="btn">📁 Go to Investor Desk</a>
+  <header>
+    <h1>📊 StocksLedger</h1>
+    <p>Your ultimate investor intelligence dashboard — all earnings in one place.</p>
+    <div class="cta-buttons">
+      <a href="/investor-desk">Investor Desk</a>
+      <a href="#">Compare Quarters</a>
+    </div>
+  </header>
+
+  <div class="section">
+    <h2>Why StocksLedger?</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>🎧 Earnings Call Archive</h3>
+        <p>Listen to historical earnings calls from Indian companies with one click.</p>
+      </div>
+      <div class="feature">
+        <h3>📑 Transcripts & Presentations</h3>
+        <p>Access official transcripts and investor decks in seconds.</p>
+      </div>
+      <div class="feature">
+        <h3>📊 Quarterly Comparison</h3>
+        <p>Compare revenue, net profit, and margin across quarters or years.</p>
+      </div>
+      <div class="feature">
+        <h3>📈 Cross-Company Analysis</h3>
+        <p>Benchmark metrics between different companies and sectors.</p>
+      </div>
+    </div>
+
+    <div class="preview">
+      <h2>Try the Dashboard</h2>
+      <p>Explore hundreds of earnings resources with filters and search.</p>
+      <a class="cta" href="/investor-desk">Go to Investor Desk →</a>
+    </div>
+
+    <div class="tools">
+      <h2 style="margin-top: 2rem;">Quick Links</h2>
+      <a href="#">Compare Companies</a>
+      <a href="#">Sector Summary</a>
+      <a href="#">Q1 FY2026 Highlights</a>
+    </div>
+  </div>
+
+  <footer>
+    Made with ❤️ by StocksLedger | © 2025
+  </footer>
+
 </body>
 </html>
