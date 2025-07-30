@@ -8,11 +8,11 @@ DRIVE_LINKS_JSON = "drive_links.json"
 
 @app.route("/")
 def homepage():
-    return render_template("index.html")  # 🏠 This will be the new homepage (StocksLedger)
+    return render_template("index.html")  # 🏠 Homepage
 
 @app.route("/investor-desk")
 def investor_desk():
-    return render_template("investor_desk.html")  # 📁 Existing dashboard goes here
+    return render_template("investor_desk.html")  # 📁 Dashboard
 
 @app.route("/api/presentations")
 def get_presentations():
