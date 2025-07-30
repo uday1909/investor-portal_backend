@@ -2,302 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>📊 Investor Portal Dashboard</title>
+  <title>📊 StocksLedger - Investor Hub</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      padding: 2rem;
-      background: #f4f6f8;
+      text-align: center;
+      background: #f9f9f9;
       margin: 0;
+      padding: 4rem 2rem;
     }
-
     h1 {
+      font-size: 2.8rem;
       color: #2c3e50;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
     }
-
-    .filters {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 30px;
+    p {
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 2.5rem;
     }
-
-    input, select {
-      padding: 10px;
-      font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    input {
-      width: 300px;
-    }
-
-    #output {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      align-items: flex-start;
-    }
-
-    .company {
-      flex: 1 1 calc(20% - 20px);
-      min-width: 200px;
-      max-width: 280px;
-      background: #fff;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 1px 6px rgba(0,0,0,0.05);
-      box-sizing: border-box;
-      transition: box-shadow 0.3s ease;
-      overflow: hidden;
-    }
-
-    .company:hover {
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    .company h2 {
-      margin: 0;
-      font-size: 18px;
-      color: #2c3e50;
-      cursor: pointer;
-    }
-
-    .quarters {
-      overflow: hidden;
-      max-height: 0;
-      transition: max-height 0.4s ease;
-    }
-
-    .quarters.expanded {
-      max-height: 1000px; /* Big enough to fit content */
-    }
-
-    .quarter {
-      margin-top: 0.5rem;
-      font-size: 15px;
-    }
-
-    .quarter h4 {
-      margin: 0.5rem 0;
-      font-size: 15px;
-      color: #333;
-      cursor: pointer;
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 1rem;
-      margin: 0.5rem 0 0 0;
-      overflow: hidden;
-      max-height: 0;
-      transition: max-height 0.4s ease;
-    }
-
-    ul.expanded {
-      max-height: 500px;
-    }
-
-    li {
-      margin: 5px 0;
-    }
-
-    a {
-      color: #007acc;
+    .btn {
+      display: inline-block;
+      background: #007bff;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-size: 1rem;
       text-decoration: none;
+      transition: background 0.3s ease;
     }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .icon {
-      margin-right: 6px;
-    }
-
-    .not-found {
-      color: #999;
-    }
-
-    @media (max-width: 1200px) {
-      .company { flex: 1 1 calc(25% - 20px); }
-    }
-
-    @media (max-width: 900px) {
-      .company { flex: 1 1 calc(33.33% - 20px); }
-    }
-
-    @media (max-width: 600px) {
-      .company { flex: 1 1 calc(50% - 20px); }
-    }
-
-    @media (max-width: 400px) {
-      .company { flex: 1 1 100%; }
+    .btn:hover {
+      background: #0056b3;
     }
   </style>
 </head>
 <body>
-  <h1>📊 Investor Portal Dashboard</h1>
+  <h1>📊 StocksLedger</h1>
+  <p>One-stop platform for Investor Calls, Presentations, Transcripts & Comparisons.</p>
 
-  <div class="filters">
-    <input list="companies" id="searchBox" placeholder="Search company..." oninput="filterCompanies()">
-    <datalist id="companies"></datalist>
-
-    <select id="quarterFilter" onchange="filterCompanies()">
-      <option value="">All Quarters</option>
-    </select>
-
-    <select id="typeFilter" onchange="filterCompanies()">
-      <option value="">All File Types</option>
-      <option value="pdf">PDF Only</option>
-      <option value="mp3">MP3 Only</option>
-    </select>
-  </div>
-
-  <div id="output">Loading data...</div>
-
-  <script>
-    let allData = {};
-    let companyList = [];
-
-    fetch("/api/presentations")
-      .then(res => res.json())
-      .then(data => {
-        if (data.error) {
-          document.getElementById("output").innerHTML = "<p class='not-found'>No data found.</p>";
-          return;
-        }
-        allData = data;
-        companyList = Object.keys(data);
-        updateAutocomplete();
-        updateQuarterDropdown();
-        filterCompanies(); // render initially
-      });
-
-    function updateAutocomplete() {
-      const datalist = document.getElementById("companies");
-      datalist.innerHTML = "";
-      companyList.forEach(name => {
-        const option = document.createElement("option");
-        option.value = name;
-        datalist.appendChild(option);
-      });
-    }
-
-    function updateQuarterDropdown() {
-      const qSet = new Set();
-      companyList.forEach(company => {
-        Object.keys(allData[company]).forEach(qtr => qSet.add(qtr));
-      });
-      const sorted = [...qSet].sort().reverse();
-      const dropdown = document.getElementById("quarterFilter");
-      sorted.forEach(qtr => {
-        const opt = document.createElement("option");
-        opt.value = qtr;
-        opt.text = qtr;
-        dropdown.appendChild(opt);
-      });
-    }
-
-    function filterCompanies() {
-      const term = document.getElementById("searchBox").value.toLowerCase();
-      const qtrFilter = document.getElementById("quarterFilter").value;
-      const typeFilter = document.getElementById("typeFilter").value;
-
-      const filtered = companyList.filter(c => c.toLowerCase().includes(term));
-
-      const result = {};
-      filtered.forEach(company => {
-        result[company] = {};
-        const quarters = allData[company];
-        for (const qtr in quarters) {
-          if (qtrFilter && qtr !== qtrFilter) continue;
-          const filteredFiles = quarters[qtr].filter(f => {
-            if (!typeFilter) return true;
-            return getFileExtension(f.file) === typeFilter;
-          });
-          if (filteredFiles.length > 0) result[company][qtr] = filteredFiles;
-        }
-        if (Object.keys(result[company]).length === 0) delete result[company];
-      });
-
-      renderCompanies(result);
-    }
-
-    function renderCompanies(data) {
-      const container = document.getElementById("output");
-      container.innerHTML = "";
-
-      const keys = Object.keys(data);
-      if (keys.length === 0) {
-        container.innerHTML = "<p class='not-found'>No matching results.</p>";
-        return;
-      }
-
-      keys.forEach(company => {
-        const companyDiv = document.createElement("div");
-        companyDiv.className = "company";
-        const companyId = `company_${company.replace(/\W+/g, "_")}`;
-
-        companyDiv.innerHTML = `
-          <h2 onclick="toggleCompany('${companyId}')">${company}</h2>
-          <div id="${companyId}" class="quarters"></div>
-        `;
-        const quartersDiv = companyDiv.querySelector(".quarters");
-
-        const quarters = data[company];
-        const sorted = Object.keys(quarters).sort().reverse();
-        sorted.forEach(qtr => {
-          const toggleId = `${company}_${qtr}`.replace(/\W+/g, "_");
-          const qtrDiv = document.createElement("div");
-          qtrDiv.className = "quarter";
-          qtrDiv.innerHTML = `
-            <h4 onclick="toggleVisibility('${toggleId}')">
-              ▶ ${qtr} (${quarters[qtr].length} file${quarters[qtr].length !== 1 ? 's' : ''})
-            </h4>
-            <ul id="${toggleId}"></ul>
-          `;
-
-          const ul = qtrDiv.querySelector("ul");
-
-          quarters[qtr].forEach(f => {
-            const ext = getFileExtension(f.file);
-            const icon = getFileIcon(ext);
-            const li = document.createElement("li");
-            li.innerHTML = `<span class="icon">${icon}</span><a href="${f.file}" target="_blank">${f.name} (${ext})</a>`;
-            ul.appendChild(li);
-          });
-
-          quartersDiv.appendChild(qtrDiv);
-        });
-
-        container.appendChild(companyDiv);
-      });
-    }
-
-    function toggleVisibility(id) {
-      const el = document.getElementById(id);
-      el.classList.toggle("expanded");
-    }
-
-    function toggleCompany(id) {
-      const el = document.getElementById(id);
-      el.classList.toggle("expanded");
-    }
-
-    function getFileExtension(link) {
-      const parts = link.split(".");
-      return parts.length > 1 ? parts.pop().split("?")[0].toLowerCase() : "file";
-    }
-
-    function getFileIcon(ext) {
-      if (ext === "pdf") return "📄";
-      if (ext === "mp3" || ext === "m4a") return "🎧";
-      if (ext === "txt") return "📝";
-      return "📁";
-    }
-  </script>
+  <a href="/investor-desk" class="btn">📁 Go to Investor Desk</a>
 </body>
 </html>
