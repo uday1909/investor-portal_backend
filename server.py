@@ -33,18 +33,22 @@ def submit_request():
     quarter = request.form.get("quarter", "")
     missing_type = request.form.get("type", "")
 
+    print("Received request:", company, quarter, missing_type)
+
     new_request = {
         "company": company,
         "quarter": quarter,
         "type": missing_type
     }
 
-    # Save to file
+    all_requests = []
     if os.path.exists(REQUESTS_JSON):
-        with open(REQUESTS_JSON, "r") as f:
-            all_requests = json.load(f)
-    else:
-        all_requests = []
+        try:
+            with open(REQUESTS_JSON, "r") as f:
+                all_requests = json.load(f)
+        except json.JSONDecodeError:
+            print("⚠️ JSON decode error. Reinitializing file.")
+            all_requests = []
 
     all_requests.append(new_request)
 
