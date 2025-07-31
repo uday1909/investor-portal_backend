@@ -1,11 +1,12 @@
-from flask import Flask, jsonify, render_template, request, redirect
+from flask import Flask, jsonify, render_template, request
 import os
 import json
+import logging
 
 app = Flask(__name__, static_folder="static", template_folder="templates")
 
 DRIVE_LINKS_JSON = "drive_links.json"
-REQUESTS_JSON = "data_requests.json"
+REQUESTS_JSON = "/tmp/data_requests.json"  # ✅ Writable path on Render
 
 @app.route("/")
 def homepage():
@@ -33,7 +34,7 @@ def submit_request():
     quarter = request.form.get("quarter", "")
     missing_type = request.form.get("type", "")
 
-    print("Received request:", company, quarter, missing_type)
+    print("📥 Received request:", company, quarter, missing_type)
 
     new_request = {
         "company": company,
@@ -52,8 +53,12 @@ def submit_request():
 
     all_requests.append(new_request)
 
-    with open(REQUESTS_JSON, "w") as f:
-        json.dump(all_requests, f, indent=2)
+    try:
+        with open(REQUESTS_JSON, "w") as f:
+            json.dump(all_requests, f, indent=2)
+        print(f"✅ Request saved to {REQUESTS_JSON}")
+    except Exception as e:
+        print(f"❌ Error writing to {REQUESTS_JSON}: {e}")
 
     return render_template("request_form.html", message="✅ Your request has been submitted.")
 
