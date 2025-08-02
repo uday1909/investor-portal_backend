@@ -6,7 +6,42 @@ import logging
 app = Flask(__name__, static_folder="static", template_folder="templates")
 
 DRIVE_LINKS_JSON = "drive_links.json"
-REQUESTS_JSON = "/tmp/data_requests.json"  # ✅ Writable path on Render
+REQUESTS_JSON = "/tmp/data_requests.json"
+SYMBOL_NAME_FILE = "symbol_to_name.json"
+SEARCH_MAP_FILE = os.path.join("static", "search_map.json")
+
+def generate_search_map():
+    if not os.path.exists(SYMBOL_NAME_FILE):
+        print(f"❌ Missing {SYMBOL_NAME_FILE}, cannot generate search map.")
+        return
+
+    try:
+        with open(SYMBOL_NAME_FILE, "r") as f:
+            symbol_to_name = json.load(f)
+
+        search_map = {}
+
+        for symbol, name in symbol_to_name.items():
+            symbol_lower = symbol.strip().lower()
+            name_lower = name.strip().lower()
+
+            search_map[symbol_lower] = symbol
+            search_map[name_lower] = symbol
+
+            # Add short variation like "tata consultancy"
+            tokens = name_lower.replace("limited", "").strip().split()
+            if len(tokens) >= 2:
+                short_name = " ".join(tokens[:2])
+                if short_name not in search_map:
+                    search_map[short_name] = symbol
+
+        os.makedirs("static", exist_ok=True)
+        with open(SEARCH_MAP_FILE, "w") as f:
+            json.dump(search_map, f, indent=2)
+
+        print(f"✅ Generated {SEARCH_MAP_FILE} with {len(search_map)} entries.")
+    except Exception as e:
+        print(f"❌ Error generating search map: {e}")
 
 @app.route("/")
 def homepage():
@@ -63,4 +98,5 @@ def submit_request():
     return render_template("request_form.html", message="✅ Your request has been submitted.")
 
 if __name__ == "__main__":
+    generate_search_map()  # 👈 Add this here
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
