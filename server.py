@@ -10,6 +10,7 @@ REQUESTS_JSON = "/tmp/data_requests.json"
 SYMBOL_NAME_FILE = "symbol_to_name.json"
 SEARCH_MAP_FILE = os.path.join("static", "search_map.json")
 
+
 def generate_search_map():
     if not os.path.exists(SYMBOL_NAME_FILE):
         print(f"❌ Missing {SYMBOL_NAME_FILE}, cannot generate search map.")
@@ -43,25 +44,35 @@ def generate_search_map():
     except Exception as e:
         print(f"❌ Error generating search map: {e}")
 
+
 @app.route("/")
 def homepage():
     return render_template("index.html")
+
 
 @app.route("/investor-desk")
 def investor_desk():
     return render_template("investor_desk.html")
 
+
 @app.route("/api/presentations")
 def get_presentations():
     if not os.path.exists(DRIVE_LINKS_JSON):
         return jsonify({"error": "drive_links.json not found", "data": {}}), 200
-    with open(DRIVE_LINKS_JSON, "r") as f:
-        data = json.load(f)
-    return jsonify(data)
+
+    try:
+        with open(DRIVE_LINKS_JSON, "r") as f:
+            data = json.load(f)
+        return jsonify(data)
+    except Exception as e:
+        print(f"❌ Error reading drive_links.json: {e}")
+        return jsonify({"error": "drive_links.json is invalid or corrupted", "data": {}}), 200
+
 
 @app.route("/request")
 def request_page():
     return render_template("request_form.html")
+
 
 @app.route("/submit-request", methods=["POST"])
 def submit_request():
@@ -95,8 +106,14 @@ def submit_request():
     except Exception as e:
         print(f"❌ Error writing to {REQUESTS_JSON}: {e}")
 
-    return render_template("request_form.html", message="✅ Your request has been submitted.")
+    return render_template("request_form.html", message="✅ Your requet has been submitted.")
+
+
+@app.route("/health")
+def health_check():
+    return "✅ Server is running", 200
+
 
 if __name__ == "__main__":
-    generate_search_map()  # 👈 Add this here
+    generate_search_map()
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
