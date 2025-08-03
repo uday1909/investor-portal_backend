@@ -13,7 +13,7 @@
 
     h1 {
       color: #2c3e50;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
 
     .filters {
@@ -72,7 +72,7 @@
     }
 
     .quarters.expanded {
-      max-height: 1000px; /* Big enough to fit content */
+      max-height: 1000px;
     }
 
     .quarter {
@@ -119,6 +119,7 @@
 
     .not-found {
       color: #999;
+      font-style: italic;
     }
 
     @media (max-width: 1200px) {
@@ -142,13 +143,10 @@
   <h1>📊 Investor Portal Dashboard</h1>
 
   <div class="filters">
-    <input list="companies" id="searchBox" placeholder="Search company..." oninput="filterCompanies()">
-    <datalist id="companies"></datalist>
-
+    <input id="searchBox" placeholder="Search company..." oninput="filterCompanies()">
     <select id="quarterFilter" onchange="filterCompanies()">
       <option value="">All Quarters</option>
     </select>
-
     <select id="typeFilter" onchange="filterCompanies()">
       <option value="">All File Types</option>
       <option value="pdf">PDF Only</option>
@@ -173,7 +171,6 @@
         }
         allData = data;
         companyList = Object.keys(data);
-        updateAutocomplete();
         updateQuarterDropdown();
         filterCompanies(); // render initially
       });
@@ -181,19 +178,7 @@
     // Load search map
     fetch("/static/search_map.json")
       .then(res => res.json())
-      .then(map => {
-        searchMap = map;
-      });
-
-    function updateAutocomplete() {
-      const datalist = document.getElementById("companies");
-      datalist.innerHTML = "";
-      companyList.forEach(name => {
-        const option = document.createElement("option");
-        option.value = name;
-        datalist.appendChild(option);
-      });
-    }
+      .then(map => { searchMap = map; });
 
     function updateQuarterDropdown() {
       const qSet = new Set();
@@ -212,11 +197,8 @@
 
     function filterCompanies() {
       let term = document.getElementById("searchBox").value.trim().toLowerCase();
-
-      // Normalize the input term using searchMap
       let matchedSymbol = searchMap[term];
       if (!matchedSymbol) {
-        // Try partial match if not exact
         for (const key in searchMap) {
           if (key.includes(term)) {
             matchedSymbol = searchMap[key];
@@ -224,8 +206,6 @@
           }
         }
       }
-
-      // Use the matched symbol if found, else fallback to term
       const finalTerm = matchedSymbol ? matchedSymbol.toLowerCase() : term;
 
       const qtrFilter = document.getElementById("quarterFilter").value;
@@ -284,7 +264,6 @@
             </h4>
             <ul id="${toggleId}"></ul>
           `;
-
           const ul = qtrDiv.querySelector("ul");
 
           quarters[qtr].forEach(f => {
