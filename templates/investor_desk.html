@@ -1,8 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>📊 Investor Portal Dashboard</title>
+  <meta charset="UTF-8" />
+  <title>Investor Desk | Download Concall Recordings, Presentations & Transcripts</title>
+
+  <meta name="description" content="Download earnings call recordings, investor presentations, and transcripts for Indian companies like TCS, Infosys, and HDFC.">
+  <meta name="keywords" content="TCS Concall, Infosys Earnings, Investor Presentation, Transcript, NSE BSE, Indian stocks, Q1 FY2025, Q4 FY2024">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="StocksLedger" />
+
+  <!-- Open Graph (for social previews) -->
+  <meta property="og:title" content="Investor Desk | Company Concall Data" />
+  <meta property="og:description" content="Explore concall data, presentations and transcripts from top Indian companies." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/static/logo.png" />
+  <meta property="og:url" content="https://investor-portal-backend.onrender.com/investor-desk" />
+
+  <link rel="icon" href="/static/favicon.ico" />
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -121,21 +135,10 @@
       color: #999;
     }
 
-    @media (max-width: 1200px) {
-      .company { flex: 1 1 calc(25% - 20px); }
-    }
-
-    @media (max-width: 900px) {
-      .company { flex: 1 1 calc(33.33% - 20px); }
-    }
-
-    @media (max-width: 600px) {
-      .company { flex: 1 1 calc(50% - 20px); }
-    }
-
-    @media (max-width: 400px) {
-      .company { flex: 1 1 100%; }
-    }
+    @media (max-width: 1200px) { .company { flex: 1 1 calc(25% - 20px); } }
+    @media (max-width: 900px)  { .company { flex: 1 1 calc(33.33% - 20px); } }
+    @media (max-width: 600px)  { .company { flex: 1 1 calc(50% - 20px); } }
+    @media (max-width: 400px)  { .company { flex: 1 1 100%; } }
   </style>
 </head>
 <body>
@@ -160,26 +163,18 @@
     let companyList = [];
     let searchMap = {};
 
-    // Load presentation data
     fetch("/api/presentations")
       .then(res => res.json())
       .then(data => {
-        if (data.error) {
-          document.getElementById("output").innerHTML = "<p class='not-found'>No data found.</p>";
-          return;
-        }
         allData = data;
         companyList = Object.keys(data);
         updateQuarterDropdown();
         filterCompanies();
       });
 
-    // Load search map
     fetch("/static/search_map.json")
       .then(res => res.json())
-      .then(map => {
-        searchMap = map;
-      });
+      .then(map => { searchMap = map; });
 
     function updateQuarterDropdown() {
       const qSet = new Set();
@@ -203,17 +198,11 @@
 
       let termsToMatch = [];
 
-      // Match all mapped symbols (partial or exact)
       for (const key in searchMap) {
-        if (key.includes(term)) {
-          termsToMatch.push(searchMap[key].toLowerCase());
-        }
+        if (key.includes(term)) termsToMatch.push(searchMap[key].toLowerCase());
       }
 
-      // fallback: use raw term if no mapped match
-      if (termsToMatch.length === 0 && term) {
-        termsToMatch.push(term);
-      }
+      if (termsToMatch.length === 0 && term) termsToMatch.push(term);
 
       const filtered = companyList.filter(c => {
         return termsToMatch.length === 0 || termsToMatch.some(t => c.toLowerCase().includes(t));
@@ -271,6 +260,7 @@
             <ul id="${toggleId}"></ul>
           `;
           const ul = qtrDiv.querySelector("ul");
+
           quarters[qtr].forEach(f => {
             const ext = getFileExtension(f.file);
             const icon = getFileIcon(ext);
@@ -278,6 +268,7 @@
             li.innerHTML = `<span class="icon">${icon}</span><a href="${f.file}" target="_blank">${f.name}</a>`;
             ul.appendChild(li);
           });
+
           quartersDiv.appendChild(qtrDiv);
         });
 
