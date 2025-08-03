@@ -275,7 +275,7 @@
             const ext = getFileExtension(f.file);
             const icon = getFileIcon(ext);
             const li = document.createElement("li");
-            li.innerHTML = `<span class="icon">${icon}</span><a href="${f.file}" target="_blank">${f.name} (${ext})</a>`;
+            li.innerHTML = `<span class="icon">${icon}</span><a href="${f.file}" target="_blank">${f.name}</a>`;
             ul.appendChild(li);
           });
           quartersDiv.appendChild(qtrDiv);
