@@ -13,7 +13,7 @@
 
     h1 {
       color: #2c3e50;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
     }
 
     .filters {
@@ -119,7 +119,6 @@
 
     .not-found {
       color: #999;
-      font-style: italic;
     }
 
     @media (max-width: 1200px) {
@@ -172,13 +171,15 @@
         allData = data;
         companyList = Object.keys(data);
         updateQuarterDropdown();
-        filterCompanies(); // render initially
+        filterCompanies();
       });
 
     // Load search map
     fetch("/static/search_map.json")
       .then(res => res.json())
-      .then(map => { searchMap = map; });
+      .then(map => {
+        searchMap = map;
+      });
 
     function updateQuarterDropdown() {
       const qSet = new Set();
@@ -196,22 +197,27 @@
     }
 
     function filterCompanies() {
-      let term = document.getElementById("searchBox").value.trim().toLowerCase();
-      let matchedSymbol = searchMap[term];
-      if (!matchedSymbol) {
-        for (const key in searchMap) {
-          if (key.includes(term)) {
-            matchedSymbol = searchMap[key];
-            break;
-          }
-        }
-      }
-      const finalTerm = matchedSymbol ? matchedSymbol.toLowerCase() : term;
-
+      const term = document.getElementById("searchBox").value.trim().toLowerCase();
       const qtrFilter = document.getElementById("quarterFilter").value;
       const typeFilter = document.getElementById("typeFilter").value;
 
-      const filtered = companyList.filter(c => c.toLowerCase().includes(finalTerm));
+      let termsToMatch = [];
+
+      // Match all mapped symbols (partial or exact)
+      for (const key in searchMap) {
+        if (key.includes(term)) {
+          termsToMatch.push(searchMap[key].toLowerCase());
+        }
+      }
+
+      // fallback: use raw term if no mapped match
+      if (termsToMatch.length === 0 && term) {
+        termsToMatch.push(term);
+      }
+
+      const filtered = companyList.filter(c => {
+        return termsToMatch.length === 0 || termsToMatch.some(t => c.toLowerCase().includes(t));
+      });
 
       const result = {};
       filtered.forEach(company => {
@@ -265,7 +271,6 @@
             <ul id="${toggleId}"></ul>
           `;
           const ul = qtrDiv.querySelector("ul");
-
           quarters[qtr].forEach(f => {
             const ext = getFileExtension(f.file);
             const icon = getFileIcon(ext);
@@ -273,7 +278,6 @@
             li.innerHTML = `<span class="icon">${icon}</span><a href="${f.file}" target="_blank">${f.name} (${ext})</a>`;
             ul.appendChild(li);
           });
-
           quartersDiv.appendChild(qtrDiv);
         });
 
