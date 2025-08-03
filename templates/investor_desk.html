@@ -212,14 +212,26 @@
 
     function filterCompanies() {
       let term = document.getElementById("searchBox").value.trim().toLowerCase();
-      if (searchMap[term]) {
-        term = searchMap[term].toLowerCase();  // Normalize to actual symbol
+
+      // Normalize the input term using searchMap
+      let matchedSymbol = searchMap[term];
+      if (!matchedSymbol) {
+        // Try partial match if not exact
+        for (const key in searchMap) {
+          if (key.includes(term)) {
+            matchedSymbol = searchMap[key];
+            break;
+          }
+        }
       }
+
+      // Use the matched symbol if found, else fallback to term
+      const finalTerm = matchedSymbol ? matchedSymbol.toLowerCase() : term;
 
       const qtrFilter = document.getElementById("quarterFilter").value;
       const typeFilter = document.getElementById("typeFilter").value;
 
-      const filtered = companyList.filter(c => c.toLowerCase().includes(term));
+      const filtered = companyList.filter(c => c.toLowerCase().includes(finalTerm));
 
       const result = {};
       filtered.forEach(company => {
