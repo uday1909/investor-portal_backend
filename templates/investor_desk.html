@@ -161,7 +161,9 @@
   <script>
     let allData = {};
     let companyList = [];
+    let searchMap = {};
 
+    // Load presentation data
     fetch("/api/presentations")
       .then(res => res.json())
       .then(data => {
@@ -174,6 +176,13 @@
         updateAutocomplete();
         updateQuarterDropdown();
         filterCompanies(); // render initially
+      });
+
+    // Load search map
+    fetch("/static/search_map.json")
+      .then(res => res.json())
+      .then(map => {
+        searchMap = map;
       });
 
     function updateAutocomplete() {
@@ -202,7 +211,11 @@
     }
 
     function filterCompanies() {
-      const term = document.getElementById("searchBox").value.toLowerCase();
+      let term = document.getElementById("searchBox").value.trim().toLowerCase();
+      if (searchMap[term]) {
+        term = searchMap[term].toLowerCase();  // Normalize to actual symbol
+      }
+
       const qtrFilter = document.getElementById("quarterFilter").value;
       const typeFilter = document.getElementById("typeFilter").value;
 
