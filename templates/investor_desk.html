@@ -82,55 +82,13 @@
     }
 
     .quarters {
-      overflow: hidden;
-      max-height: 0;
-      transition: max-height 0.4s ease;
-    }
-
-    .quarters.expanded {
-      max-height: 1000px;
+      margin-top: 0.75rem;
     }
 
     .quarter {
-      margin-top: 0.5rem;
-      font-size: 15px;
-    }
-
-    .quarter h4 {
-      margin: 0.5rem 0;
-      font-size: 15px;
-      color: #333;
-      cursor: pointer;
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 1rem;
-      margin: 0.5rem 0 0 0;
-      overflow: hidden;
-      max-height: 0;
-      transition: max-height 0.4s ease;
-    }
-
-    ul.expanded {
-      max-height: 500px;
-    }
-
-    li {
-      margin: 5px 0;
-    }
-
-    a {
-      color: #007acc;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .icon {
-      margin-right: 6px;
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 4px;
     }
 
     .not-found {
@@ -239,7 +197,6 @@
       }
 
       keys.forEach(company => {
-        const companyId = `company_${company.replace(/\W+/g, "_")}`;
         const companyLink = document.createElement("a");
         companyLink.href = `/company/${company}`;
         companyLink.className = "company";
@@ -248,31 +205,15 @@
         companyDiv.innerHTML = `<h2>${company}</h2>`;
 
         const quartersDiv = document.createElement("div");
-        quartersDiv.className = "quarters expanded";
+        quartersDiv.className = "quarters";
 
         const quarters = data[company];
         const sorted = Object.keys(quarters).sort().reverse();
 
         sorted.forEach(qtr => {
-          const toggleId = `${company}_${qtr}`.replace(/\W+/g, "_");
           const qtrDiv = document.createElement("div");
           qtrDiv.className = "quarter";
-          qtrDiv.innerHTML = `
-            <h4 onclick="toggleVisibility('${toggleId}')">
-              ▶ ${qtr} (${quarters[qtr].length} file${quarters[qtr].length !== 1 ? 's' : ''})
-            </h4>
-            <ul id="${toggleId}"></ul>
-          `;
-          const ul = qtrDiv.querySelector("ul");
-
-          quarters[qtr].forEach(f => {
-            const ext = getFileExtension(f.file);
-            const icon = getFileIcon(ext);
-            const li = document.createElement("li");
-            li.innerHTML = `<span class="icon">${icon}</span><a href="${f.file}" target="_blank">${f.name}</a>`;
-            ul.appendChild(li);
-          });
-
+          qtrDiv.innerHTML = `📁 ${qtr}`;
           quartersDiv.appendChild(qtrDiv);
         });
 
@@ -282,21 +223,9 @@
       });
     }
 
-    function toggleVisibility(id) {
-      const el = document.getElementById(id);
-      el.classList.toggle("expanded");
-    }
-
     function getFileExtension(link) {
       const parts = link.split(".");
       return parts.length > 1 ? parts.pop().split("?")[0].toLowerCase() : "file";
-    }
-
-    function getFileIcon(ext) {
-      if (ext === "pdf") return "📄";
-      if (ext === "mp3" || ext === "m4a") return "🎧";
-      if (ext === "txt") return "📝";
-      return "📁";
     }
   </script>
 </body>
