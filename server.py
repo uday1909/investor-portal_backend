@@ -138,13 +138,14 @@ def submit_request():
 def robots():
     return app.send_static_file("robots.txt")
 
+from flask import Response
+
 @app.route("/sitemap.xml")
 def sitemap():
-    from flask import Response
     import json
     import os
 
-    data_path = "drive_links.json"  # Your actual company data
+    data_path = "drive_links.json"  # Or your actual company data source
     if not os.path.exists(data_path):
         return Response("Not Found", status=404)
 
@@ -166,12 +167,12 @@ def sitemap():
   </url>"""
         )
 
-    xml_content = f"""<?xml version="1.0" encoding="UTF-8"?>
+    xml_body = f"""<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {chr(10).join(urls)}
 </urlset>"""
 
-    return Response(xml_content, mimetype='application/xml')
+    return Response(xml_body, mimetype='application/xml')
 
 @app.route("/health")
 def health_check():
