@@ -141,17 +141,25 @@ def robots():
 @app.route("/sitemap.xml")
 def sitemap():
     from flask import Response
+    import json
+    import os
 
-    pages = []
+    # Load the latest presentation data from file
+    data_path = os.path.join("static", "presentations.json")
+    if not os.path.exists(data_path):
+        return Response("Not Found", status=404)
+
+    with open(data_path, "r") as f:
+        data = json.load(f)
+
     base_url = "https://investor-portal-backend.onrender.com"
 
-    # Homepage
-    pages.append(f"<url><loc>{base_url}/investor-desk</loc></url>")
-
-    # Company pages
+    # Build sitemap entries
+    pages = [f"<url><loc>{base_url}/investor-desk</loc></url>"]
     for company in data.keys():
         pages.append(f"<url><loc>{base_url}/company/{company}</loc></url>")
 
+    # Assemble XML
     xml = f"""<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {''.join(pages)}
