@@ -146,6 +146,28 @@ def sitemap():
 def health_check():
     return "✅ Server is running", 200
 
+@app.route("/sitemap.xml")
+def sitemap():
+    from flask import Response
+    import datetime
+
+    pages = []
+    base_url = "https://investor-portal-backend.onrender.com"
+
+    # Add homepage
+    pages.append(f"<url><loc>{base_url}/investor-desk</loc></url>")
+
+    # Add one URL per company
+    for company in data.keys():
+        pages.append(f"<url><loc>{base_url}/company/{company}</loc></url>")
+
+    # Build XML
+    xml = f"""<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{''.join(pages)}
+</urlset>"""
+
+    return Response(xml, mimetype='application/xml')
 
 if __name__ == "__main__":
     generate_search_map()
