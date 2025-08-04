@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Investor Desk - Concall, Presentations & Earnings Reports</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO Meta Tags -->
   <meta name="description" content="Access quarterly earnings, concall recordings, and investor presentations for TCS, Infosys, Wipro, and 1000+ Indian companies.">
   <meta name="keywords" content="TCS concall, Infosys investor presentation, earnings reports India, stock analysis, investor desk, company results, quarterly results, Tata Consultancy Services, earnings call">
   <meta name="author" content="StocksLedger">
 
-  <!-- Open Graph for sharing on social platforms -->
+  <!-- Open Graph for social sharing -->
   <meta property="og:title" content="Investor Desk - Concall, Presentations & Reports">
   <meta property="og:description" content="One-stop portal to access earnings calls and investor documents for Indian companies like TCS, Infosys, and more.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://investor-portal-backend.onrender.com/investor-desk">
   <meta property="og:image" content="https://investor-portal-backend.onrender.com/static/stocksledger.png">
 
-  <!-- Favicon and styles can stay -->
   <link rel="icon" href="/static/favicon.ico" />
   <style>
     body {
@@ -58,6 +57,7 @@
     }
 
     .company {
+      display: block;
       flex: 1 1 calc(20% - 20px);
       min-width: 200px;
       max-width: 280px;
@@ -66,8 +66,9 @@
       border-radius: 8px;
       box-shadow: 0 1px 6px rgba(0,0,0,0.05);
       box-sizing: border-box;
+      text-decoration: none;
+      color: inherit;
       transition: box-shadow 0.3s ease;
-      overflow: hidden;
     }
 
     .company:hover {
@@ -78,7 +79,6 @@
       margin: 0;
       font-size: 18px;
       color: #2c3e50;
-      cursor: pointer;
     }
 
     .quarters {
@@ -239,21 +239,20 @@
       }
 
       keys.forEach(company => {
+        const companyId = `company_${company.replace(/\W+/g, "_")}`;
         const companyLink = document.createElement("a");
         companyLink.href = `/company/${company}`;
         companyLink.className = "company";
-        companyLink.style.textDecoration = "none";
-        companyLink.style.color = "inherit";
-        const companyId = `company_${company.replace(/\W+/g, "_")}`;
 
-        companyDiv.innerHTML = `
-          <h2 onclick="toggleCompany('${companyId}')">${company}</h2>
-          <div id="${companyId}" class="quarters"></div>
-        `;
-        const quartersDiv = companyDiv.querySelector(".quarters");
+        const companyDiv = document.createElement("div");
+        companyDiv.innerHTML = `<h2>${company}</h2>`;
+
+        const quartersDiv = document.createElement("div");
+        quartersDiv.className = "quarters expanded";
 
         const quarters = data[company];
         const sorted = Object.keys(quarters).sort().reverse();
+
         sorted.forEach(qtr => {
           const toggleId = `${company}_${qtr}`.replace(/\W+/g, "_");
           const qtrDiv = document.createElement("div");
@@ -277,16 +276,13 @@
           quartersDiv.appendChild(qtrDiv);
         });
 
+        companyDiv.appendChild(quartersDiv);
+        companyLink.appendChild(companyDiv);
         container.appendChild(companyLink);
       });
     }
 
     function toggleVisibility(id) {
-      const el = document.getElementById(id);
-      el.classList.toggle("expanded");
-    }
-
-    function toggleCompany(id) {
       const el = document.getElementById(id);
       el.classList.toggle("expanded");
     }
