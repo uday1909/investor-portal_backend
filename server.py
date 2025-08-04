@@ -68,6 +68,32 @@ def get_presentations():
         print(f"❌ Error reading drive_links.json: {e}")
         return jsonify({"error": "drive_links.json is invalid or corrupted", "data": {}}), 200
 
+@app.route("/company/<symbol>")
+def company_page(symbol):
+    symbol = symbol.upper()
+
+    # Load company name from symbol_to_name.json
+    if not os.path.exists(SYMBOL_NAME_FILE):
+        return f"Company mapping not available.", 500
+
+    with open(SYMBOL_NAME_FILE, "r") as f:
+        symbol_to_name = json.load(f)
+
+    if symbol not in symbol_to_name:
+        return f"No data found for company symbol: {symbol}", 404
+
+    company_name = symbol_to_name[symbol]
+
+    # Load drive_links.json to get that company's data
+    if not os.path.exists(DRIVE_LINKS_JSON):
+        return f"No data found.", 500
+
+    with open(DRIVE_LINKS_JSON, "r") as f:
+        data = json.load(f)
+
+    company_data = data.get(symbol, {})
+
+    return render_template("company_page.html", symbol=symbol, company_name=company_name, company_data=company_data)
 
 @app.route("/request")
 def request_page():
