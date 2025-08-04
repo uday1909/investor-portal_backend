@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+https://investor-portal-backend.onrender.com/sitemap.xml
