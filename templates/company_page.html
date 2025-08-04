@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ company_name }} Concall Recordings | StocksLedger</title>
+  <meta name="description" content="Find {{ company_name }} quarterly investor presentations, concall recordings, and earnings transcripts on StocksLedger.">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      padding: 2rem;
+      background: #f4f6f8;
+      margin: 0;
+    }
+    h1 {
+      color: #2c3e50;
+      margin-bottom: 1rem;
+    }
+    .quarter {
+      margin-top: 1rem;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 6px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+    .quarter h3 {
+      margin: 0 0 0.5rem 0;
+    }
+    ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .icon {
+      margin-right: 6px;
+    }
+  </style>
+</head>
+<body>
+  <h1>📁 {{ company_name }} – Investor Materials</h1>
+
+  {% if company_data %}
+    {% for quarter, files in company_data.items() %}
+      <div class="quarter">
+        <h3>{{ quarter }} ({{ files|length }} files)</h3>
+        <ul>
+          {% for file in files %}
+            <li>
+              <span class="icon">
+                {% if file.file.endswith(".pdf") %}📄{% elif file.file.endswith(".mp3") or file.file.endswith(".m4a") %}🎧{% else %}📁{% endif %}
+              </span>
+              <a href="{{ file.file }}" target="_blank">{{ file.name }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+  {% else %}
+    <p>No files available for this company.</p>
+  {% endif %}
+</body>
+</html>
