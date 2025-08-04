@@ -1,7 +1,6 @@
-from flask import Flask, jsonify, render_template, request
+from flask import Flask, jsonify, render_template, request, Response
 import os
 import json
-import logging
 
 app = Flask(__name__, static_folder="static", template_folder="templates")
 
@@ -68,11 +67,11 @@ def get_presentations():
         print(f"❌ Error reading drive_links.json: {e}")
         return jsonify({"error": "drive_links.json is invalid or corrupted", "data": {}}), 200
 
+
 @app.route("/company/<symbol>")
 def company_page(symbol):
     symbol = symbol.upper()
 
-    # Load company name from symbol_to_name.json
     if not os.path.exists(SYMBOL_NAME_FILE):
         return f"Company mapping not available.", 500
 
@@ -84,7 +83,6 @@ def company_page(symbol):
 
     company_name = symbol_to_name[symbol]
 
-    # Load drive_links.json to get that company's data
     if not os.path.exists(DRIVE_LINKS_JSON):
         return f"No data found.", 500
 
@@ -94,6 +92,7 @@ def company_page(symbol):
     company_data = data.get(symbol, {})
 
     return render_template("company_page.html", symbol=symbol, company_name=company_name, company_data=company_data)
+
 
 @app.route("/request")
 def request_page():
@@ -134,46 +133,48 @@ def submit_request():
 
     return render_template("request_form.html", message="✅ Your requet has been submitted.")
 
+
 @app.route("/robots.txt")
 def robots():
     return app.send_static_file("robots.txt")
 
-from flask import Response
-
-from flask import Response
 
 @app.route("/sitemap.xml")
 def sitemap():
-    import json
-    import os
+    if not os.path.exists(DRIVE_LINKS_JSON):
+        return "drive_links.json not found", 404
 
-    # Load company symbols from your drive_links.json or similar source
-    with open("drive_links.json") as f:
-        data = json.load(f)
+    try:
+        with open(DRIVE_LINKS_JSON) as f:
+            data = json.load(f)
 
-    base_url = "https://investor-portal-backend.onrender.com"
-    urls = [f"{base_url}/investor-desk"]
+        base_url = "https://investor-portal-backend.onrender.com"
+        urls = [f"{base_url}/investor-desk"]
 
-    for symbol in data:
-        urls.append(f"{base_url}/company/{symbol}")
+        for symbol in data:
+            urls.append(f"{base_url}/company/{symbol}")
 
-    # Generate proper XML format
-    xml_items = [
-        f"""  <url>
+        xml_items = "\n".join([
+            f"""  <url>
     <loc>{url}</loc>
   </url>""" for url in urls
-    ]
+        ])
 
-    xml_string = f"""<?xml version="1.0" encoding="UTF-8"?>
+        xml_string = f"""<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-{chr(10).join(xml_items)}
+{xml_items}
 </urlset>"""
 
-    return Response(xml_string, mimetype="application/xml")
+        return Response(xml_string, mimetype="application/xml")
+    except Exception as e:
+        print(f"❌ Error generating sitemap.xml: {e}")
+        return "Error generating sitemap", 500
+
 
 @app.route("/health")
 def health_check():
     return "✅ Server is running", 200
+
 
 if __name__ == "__main__":
     generate_search_map()
