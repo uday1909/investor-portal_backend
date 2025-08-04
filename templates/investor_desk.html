@@ -38,14 +38,11 @@
       margin-bottom: 30px;
     }
 
-    input, select {
+    input {
       padding: 10px;
       font-size: 16px;
       border: 1px solid #ccc;
       border-radius: 4px;
-    }
-
-    input {
       width: 300px;
     }
 
@@ -69,6 +66,7 @@
       text-decoration: none;
       color: inherit;
       transition: box-shadow 0.3s ease;
+      text-align: center;
     }
 
     .company:hover {
@@ -79,16 +77,6 @@
       margin: 0;
       font-size: 18px;
       color: #2c3e50;
-    }
-
-    .quarters {
-      margin-top: 0.75rem;
-    }
-
-    .quarter {
-      font-size: 14px;
-      color: #444;
-      margin-bottom: 4px;
     }
 
     .not-found {
@@ -106,14 +94,6 @@
 
   <div class="filters">
     <input id="searchBox" placeholder="Search company..." oninput="filterCompanies()">
-    <select id="quarterFilter" onchange="filterCompanies()">
-      <option value="">All Quarters</option>
-    </select>
-    <select id="typeFilter" onchange="filterCompanies()">
-      <option value="">All File Types</option>
-      <option value="pdf">PDF Only</option>
-      <option value="mp3">MP3 Only</option>
-    </select>
   </div>
 
   <div id="output">Loading data...</div>
@@ -128,7 +108,6 @@
       .then(data => {
         allData = data;
         companyList = Object.keys(data);
-        updateQuarterDropdown();
         filterCompanies();
       });
 
@@ -136,26 +115,8 @@
       .then(res => res.json())
       .then(map => { searchMap = map; });
 
-    function updateQuarterDropdown() {
-      const qSet = new Set();
-      companyList.forEach(company => {
-        Object.keys(allData[company]).forEach(qtr => qSet.add(qtr));
-      });
-      const sorted = [...qSet].sort().reverse();
-      const dropdown = document.getElementById("quarterFilter");
-      sorted.forEach(qtr => {
-        const opt = document.createElement("option");
-        opt.value = qtr;
-        opt.text = qtr;
-        dropdown.appendChild(opt);
-      });
-    }
-
     function filterCompanies() {
       const term = document.getElementById("searchBox").value.trim().toLowerCase();
-      const qtrFilter = document.getElementById("quarterFilter").value;
-      const typeFilter = document.getElementById("typeFilter").value;
-
       let termsToMatch = [];
 
       for (const key in searchMap) {
@@ -168,64 +129,25 @@
         return termsToMatch.length === 0 || termsToMatch.some(t => c.toLowerCase().includes(t));
       });
 
-      const result = {};
-      filtered.forEach(company => {
-        result[company] = {};
-        const quarters = allData[company];
-        for (const qtr in quarters) {
-          if (qtrFilter && qtr !== qtrFilter) continue;
-          const filteredFiles = quarters[qtr].filter(f => {
-            if (!typeFilter) return true;
-            return getFileExtension(f.file) === typeFilter;
-          });
-          if (filteredFiles.length > 0) result[company][qtr] = filteredFiles;
-        }
-        if (Object.keys(result[company]).length === 0) delete result[company];
-      });
-
-      renderCompanies(result);
+      renderCompanies(filtered);
     }
 
-    function renderCompanies(data) {
+    function renderCompanies(companies) {
       const container = document.getElementById("output");
       container.innerHTML = "";
 
-      const keys = Object.keys(data);
-      if (keys.length === 0) {
+      if (companies.length === 0) {
         container.innerHTML = "<p class='not-found'>No matching results.</p>";
         return;
       }
 
-      keys.forEach(company => {
+      companies.forEach(company => {
         const companyLink = document.createElement("a");
         companyLink.href = `/company/${company}`;
         companyLink.className = "company";
-
-        const companyDiv = document.createElement("div");
-        companyDiv.innerHTML = `<h2>${company}</h2>`;
-
-        const quartersDiv = document.createElement("div");
-        quartersDiv.className = "quarters";
-
-        const quarters = data[company];
-        const sorted = Object.keys(quarters).sort().reverse();
-
-        sorted.forEach(qtr => {
-          const qtrDiv = document.createElement("div");
-          qtrDiv.className = "quarter";
-          qtrDiv.innerHTML = `📁 ${qtr}`;
-          quartersDiv.appendChild(qtrDiv);
-        });
-
-        companyDiv.appendChild(quartersDiv);
-        companyLink.appendChild(companyDiv);
+        companyLink.innerHTML = `<h2>${company}</h2>`;
         container.appendChild(companyLink);
       });
-    }
-
-    function getFileExtension(link) {
-      const parts = link.split(".");
-      return parts.length > 1 ? parts.pop().split("?")[0].toLowerCase() : "file";
     }
   </script>
 </body>
