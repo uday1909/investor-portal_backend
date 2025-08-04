@@ -140,39 +140,36 @@ def robots():
 
 from flask import Response
 
+from flask import Response
+
 @app.route("/sitemap.xml")
 def sitemap():
     import json
     import os
 
-    data_path = "drive_links.json"  # Or your actual company data source
-    if not os.path.exists(data_path):
-        return Response("Not Found", status=404)
-
-    with open(data_path, "r") as f:
+    # Load company symbols from your drive_links.json or similar source
+    with open("drive_links.json") as f:
         data = json.load(f)
 
     base_url = "https://investor-portal-backend.onrender.com"
+    urls = [f"{base_url}/investor-desk"]
 
-    urls = [
+    for symbol in data:
+        urls.append(f"{base_url}/company/{symbol}")
+
+    # Generate proper XML format
+    xml_items = [
         f"""  <url>
-    <loc>{base_url}/investor-desk</loc>
-  </url>"""
+    <loc>{url}</loc>
+  </url>""" for url in urls
     ]
 
-    for company in data.keys():
-        urls.append(
-            f"""  <url>
-    <loc>{base_url}/company/{company}</loc>
-  </url>"""
-        )
-
-    xml_body = f"""<?xml version="1.0" encoding="UTF-8"?>
+    xml_string = f"""<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-{chr(10).join(urls)}
+{chr(10).join(xml_items)}
 </urlset>"""
 
-    return Response(xml_body, mimetype='application/xml')
+    return Response(xml_string, mimetype="application/xml")
 
 @app.route("/health")
 def health_check():
