@@ -144,7 +144,7 @@ def sitemap():
     import json
     import os
 
-    data_path = "drive_links.json"  # ✅ Use your actual data file
+    data_path = "drive_links.json"  # Your actual company data
     if not os.path.exists(data_path):
         return Response("Not Found", status=404)
 
@@ -153,16 +153,25 @@ def sitemap():
 
     base_url = "https://investor-portal-backend.onrender.com"
 
-    pages = [f"<url><loc>{base_url}/investor-desk</loc></url>"]
-    for company in data.keys():
-        pages.append(f"<url><loc>{base_url}/company/{company}</loc></url>")
+    urls = [
+        f"""  <url>
+    <loc>{base_url}/investor-desk</loc>
+  </url>"""
+    ]
 
-    xml = f"""<?xml version="1.0" encoding="UTF-8"?>
+    for company in data.keys():
+        urls.append(
+            f"""  <url>
+    <loc>{base_url}/company/{company}</loc>
+  </url>"""
+        )
+
+    xml_content = f"""<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-{''.join(pages)}
+{chr(10).join(urls)}
 </urlset>"""
 
-    return Response(xml, mimetype='application/xml')
+    return Response(xml_content, mimetype='application/xml')
 
 @app.route("/health")
 def health_check():
