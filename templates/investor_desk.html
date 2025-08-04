@@ -239,8 +239,11 @@
       }
 
       keys.forEach(company => {
-        const companyDiv = document.createElement("div");
-        companyDiv.className = "company";
+        const companyLink = document.createElement("a");
+        companyLink.href = `/company/${company}`;
+        companyLink.className = "company";
+        companyLink.style.textDecoration = "none";
+        companyLink.style.color = "inherit";
         const companyId = `company_${company.replace(/\W+/g, "_")}`;
 
         companyDiv.innerHTML = `
@@ -274,7 +277,7 @@
           quartersDiv.appendChild(qtrDiv);
         });
 
-        container.appendChild(companyDiv);
+        container.appendChild(companyLink);
       });
     }
 
