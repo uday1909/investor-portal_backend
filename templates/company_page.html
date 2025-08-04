@@ -83,7 +83,7 @@
 
   <h1>{{ company_name }}</h1>
 
-  {% for quarter, files in data.items() %}
+  {% for quarter, files in company_data.items() %}
   <div class="quarter-card" onclick="toggleList('{{ loop.index }}')">
     <div class="quarter-title">
       <span>📅 {{ quarter }}</span>
