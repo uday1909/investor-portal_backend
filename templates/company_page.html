@@ -2,69 +2,116 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>{{ company_name }} Concall Recordings | StocksLedger</title>
-  <meta name="description" content="Find {{ company_name }} quarterly investor presentations, concall recordings, and earnings transcripts on StocksLedger.">
+  <title>{{ company_name }} - Earnings Info | StocksLedger</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Quarterly earnings, investor calls, and reports for {{ company_name }}.">
+  <meta name="keywords" content="{{ company_name }} concall, {{ company_name }} results, investor presentation, earnings call, StocksLedger">
+  <meta name="author" content="StocksLedger">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ company_name }} - Investor Info">
+  <meta property="og:description" content="Access concall recordings, earnings transcripts, and presentations for {{ company_name }}.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://investor-portal-backend.onrender.com/static/stocksledger.png">
+  <meta property="og:url" content="https://investor-portal-backend.onrender.com/company/{{ company_name }}">
+
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      padding: 2rem;
-      background: #f4f6f8;
       margin: 0;
+      padding: 2rem;
+      background: #f7f9fb;
     }
+
     h1 {
+      text-align: center;
       color: #2c3e50;
-      margin-bottom: 1rem;
     }
-    .quarter {
-      margin-top: 1rem;
+
+    .quarter-card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
       padding: 1rem;
+      margin: 1rem auto;
+      max-width: 700px;
       background: #fff;
-      border-radius: 6px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+      cursor: pointer;
+      transition: 0.2s ease;
     }
-    .quarter h3 {
-      margin: 0 0 0.5rem 0;
+
+    .quarter-card:hover {
+      background: #f0f8ff;
     }
-    ul {
-      list-style: none;
-      padding-left: 1rem;
+
+    .quarter-title {
+      font-size: 18px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    li {
-      margin-bottom: 0.5rem;
+
+    .file-list {
+      margin-top: 10px;
+      padding-left: 20px;
+      display: none;
     }
-    a {
-      color: #007acc;
+
+    .file-list li {
+      margin: 6px 0;
+    }
+
+    .file-list a {
       text-decoration: none;
+      color: #007acc;
     }
-    a:hover {
+
+    .file-list a:hover {
       text-decoration: underline;
     }
+
     .icon {
       margin-right: 6px;
     }
   </style>
+
 </head>
 <body>
-  <h1>📁 {{ company_name }} – Investor Materials</h1>
 
-  {% if company_data %}
-    {% for quarter, files in company_data.items() %}
-      <div class="quarter">
-        <h3>{{ quarter }} ({{ files|length }} files)</h3>
-        <ul>
-          {% for file in files %}
-            <li>
-              <span class="icon">
-                {% if file.file.endswith(".pdf") %}📄{% elif file.file.endswith(".mp3") or file.file.endswith(".m4a") %}🎧{% else %}📁{% endif %}
-              </span>
-              <a href="{{ file.file }}" target="_blank">{{ file.name }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-    {% endfor %}
-  {% else %}
-    <p>No files available for this company.</p>
-  {% endif %}
+  <h1>{{ company_name }}</h1>
+
+  {% for quarter, files in data.items() %}
+  <div class="quarter-card" onclick="toggleList('{{ loop.index }}')">
+    <div class="quarter-title">
+      <span>📅 {{ quarter }}</span>
+      <span>▶</span>
+    </div>
+    <ul class="file-list" id="list-{{ loop.index }}">
+      {% for file in files %}
+        <li>
+          <span class="icon">
+            {% if file.file.endswith(".pdf") %}📄
+            {% elif file.file.endswith(".mp3") or file.file.endswith(".m4a") %}🎧
+            {% elif file.file.endswith(".txt") %}📝
+            {% else %}📁
+            {% endif %}
+          </span>
+          <a href="{{ file.file }}" target="_blank">{{ file.name }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
+
+  <script>
+    function toggleList(id) {
+      const el = document.getElementById("list-" + id);
+      el.style.display = el.style.display === "block" ? "none" : "block";
+    }
+  </script>
+
 </body>
 </html>
