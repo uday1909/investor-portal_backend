@@ -151,14 +151,12 @@ def sitemap():
     except Exception as e:
         return Response(f"Error reading drive_links.json: {e}", status=500)
 
-    # Collect all unique company symbols
     companies = sorted(set(drive_links.keys()))
 
     urls = [f"{base_url}/investor-desk"]
     for symbol in companies:
         urls.append(f"{base_url}/company/{symbol}")
 
-    # Build the XML
     xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
     xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     for url in urls:
