@@ -1,67 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>{{ company_name }} – Investor Desk</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <meta charset="UTF-8">
+  <title>{{ company_name }} - Earnings Info | StocksLedger</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Quarterly earnings, investor calls, and reports for {{ company_name }}.">
+  <meta name="keywords" content="{{ company_name }} concall, {{ company_name }} results, investor presentation, earnings call, StocksLedger">
+  <meta name="author" content="StocksLedger">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ company_name }} - Investor Info">
+  <meta property="og:description" content="Access concall recordings, earnings transcripts, and presentations for {{ company_name }}.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://investor-portal-backend.onrender.com/static/stocksledger.png">
+  <meta property="og:url" content="https://investor-portal-backend.onrender.com/company/{{ company_name }}">
+
   <style>
     body {
-      background: #f4f6f9;
       font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: #f7f9fb;
     }
-    .quarter-box {
-      background: white;
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    .quarter-card {
+      border: 1px solid #ddd;
       border-radius: 8px;
-      padding: 16px;
-      margin: 10px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-      flex: 1 0 280px;
+      padding: 1rem;
+      margin: 1rem auto;
+      max-width: 700px;
+      background: #fff;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+      cursor: pointer;
+      transition: 0.2s ease;
     }
-    .quarter-scroll {
+
+    .quarter-card:hover {
+      background: #f0f8ff;
+    }
+
+    .quarter-title {
+      font-size: 18px;
+      font-weight: bold;
       display: flex;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      padding-bottom: 20px;
+      justify-content: space-between;
+      align-items: center;
     }
-    .quarter-box h5 {
-      font-weight: 600;
+
+    .file-list {
+      margin-top: 10px;
+      padding-left: 20px;
+      display: none;
     }
-    .file-link {
-      display: block;
+
+    .file-list li {
       margin: 6px 0;
     }
+
+    .file-list a {
+      text-decoration: none;
+      color: #007acc;
+    }
+
+    .file-list a:hover {
+      text-decoration: underline;
+    }
+
+    .icon {
+      margin-right: 6px;
+    }
   </style>
+
 </head>
 <body>
-  <div class="container mt-5">
-    <h3 class="text-center mb-4">{{ company_name }}</h3>
 
-    {% if company_data %}
-    <div class="quarter-scroll">
-      {% for quarter, files in company_data.items() %}
-      <div class="quarter-box">
-        <h5><i class="fa-solid fa-calendar-day me-1"></i>{{ quarter }}</h5>
-        <hr />
-        {% if files.get('presentation') %}
-          <a class="file-link" href="{{ files.presentation }}" target="_blank">📄 Presentation</a>
-        {% endif %}
-        {% if files.get('transcript') %}
-          <a class="file-link" href="{{ files.transcript }}" target="_blank">📝 Transcript</a>
-        {% endif %}
-        {% if files.get('recording') %}
-          <a class="file-link" href="{{ files.recording }}" target="_blank">🎧 Recording</a>
-        {% endif %}
-        {% if not (files.get('presentation') or files.get('transcript') or files.get('recording')) %}
-          <p class="text-muted mb-0">No data available for this quarter.</p>
-        {% endif %}
-      </div>
-      {% endfor %}
+  <h1>{{ company_name }}</h1>
+
+  {% for quarter, files in company_data.items() %}
+  <div class="quarter-card" onclick="toggleList('{{ loop.index }}')">
+    <div class="quarter-title">
+      <span>📅 {{ quarter }}</span>
+      <span>▶</span>
     </div>
-    {% else %}
-      <div class="alert alert-warning text-center">No data found for this company.</div>
-    {% endif %}
+    <ul class="file-list" id="list-{{ loop.index }}">
+      {% for file in files %}
+        <li>
+          <span class="icon">
+            {% if file.file.endswith(".pdf") %}📄
+            {% elif file.file.endswith(".mp3") or file.file.endswith(".m4a") %}🎧
+            {% elif file.file.endswith(".txt") %}📝
+            {% else %}📁
+            {% endif %}
+          </span>
+          <a href="{{ file.file }}" target="_blank">{{ file.name }}</a>
+        </li>
+      {% endfor %}
+    </ul>
   </div>
+  {% endfor %}
+
+  <script>
+    function toggleList(id) {
+      const el = document.getElementById("list-" + id);
+      el.style.display = el.style.display === "block" ? "none" : "block";
+    }
+  </script>
+
 </body>
 </html>
