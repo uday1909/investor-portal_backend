@@ -140,6 +140,7 @@ def robots():
 
 from flask import Response
 import json
+import html  # <-- Import this to escape XML
 
 @app.route("/sitemap.xml")
 def sitemap():
@@ -160,11 +161,11 @@ def sitemap():
     xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
     xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     for url in urls:
-        xml += f"  <url>\n    <loc>{url}</loc>\n  </url>\n"
+        escaped_url = html.escape(url)  # Escape special characters
+        xml += f"  <url>\n    <loc>{escaped_url}</loc>\n  </url>\n"
     xml += "</urlset>"
 
     return Response(xml, mimetype="application/xml")
-
 
 @app.route("/health")
 def health_check():
