@@ -139,8 +139,12 @@ def robots():
     return app.send_static_file("robots.txt")
 
 
+from flask import Response
+
 @app.route("/sitemap.xml")
 def sitemap():
+    import json
+
     if not os.path.exists(DRIVE_LINKS_JSON):
         return "drive_links.json not found", 404
 
@@ -149,16 +153,15 @@ def sitemap():
             data = json.load(f)
 
         base_url = "https://investor-portal-backend.onrender.com"
-        urls = [f"{base_url}/investor-desk"]
+        urls = [f"{base_url}/investor-desk"] + [
+            f"{base_url}/company/{symbol}" for symbol in data
+        ]
 
-        for symbol in data:
-            urls.append(f"{base_url}/company/{symbol}")
-
-        xml_items = "\n".join([
+        xml_items = "\n".join(
             f"""  <url>
     <loc>{url}</loc>
   </url>""" for url in urls
-        ])
+        )
 
         xml_string = f"""<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -167,8 +170,8 @@ def sitemap():
 
         return Response(xml_string, mimetype="application/xml")
     except Exception as e:
-        print(f"❌ Error generating sitemap.xml: {e}")
-        return "Error generating sitemap", 500
+        print("❌ Sitemap generation failed:", e)
+        return "Internal server error", 500
 
 
 @app.route("/health")
