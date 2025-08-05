@@ -138,39 +138,34 @@ def submit_request():
 def robots():
     return app.send_static_file("robots.txt")
 
-
 from flask import Response
+import json
 
 @app.route("/sitemap.xml")
 def sitemap():
-    import json
-    import os
-
-    # Load symbols from drive_links.json
-    if not os.path.exists(DRIVE_LINKS_JSON):
-        return "drive_links.json not found", 404
+    base_url = "https://investor-portal-backend.onrender.com"
 
     try:
-        with open(DRIVE_LINKS_JSON) as f:
-            data = json.load(f)
+        with open("drive_links.json", "r") as f:
+            drive_links = json.load(f)
     except Exception as e:
-        print("❌ Error loading drive_links.json:", e)
-        return "Internal Server Error", 500
+        return Response(f"Error reading drive_links.json: {e}", status=500)
 
-    base_url = "https://investor-portal-backend.onrender.com"
-    urls = [f"{base_url}/investor-desk"] + [
-        f"{base_url}/company/{symbol}" for symbol in data.keys()
-    ]
+    # Collect all unique company symbols
+    companies = sorted(set(drive_links.keys()))
 
-    xml_content = '<?xml version="1.0" encoding="UTF-8"?>\n'
-    xml_content += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+    urls = [f"{base_url}/investor-desk"]
+    for symbol in companies:
+        urls.append(f"{base_url}/company/{symbol}")
 
+    # Build the XML
+    xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
+    xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     for url in urls:
-        xml_content += f"  <url>\n    <loc>{url}</loc>\n  </url>\n"
+        xml += f"  <url>\n    <loc>{url}</loc>\n  </url>\n"
+    xml += "</urlset>"
 
-    xml_content += '</urlset>'
-
-    return Response(xml_content, mimetype='application/xml')
+    return Response(xml, mimetype="application/xml")
 
 
 @app.route("/health")
